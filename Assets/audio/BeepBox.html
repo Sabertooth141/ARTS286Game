@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<!-- saved from url=(1271)https://www.beepbox.co/#9n62s6k0l00e07t3ea7g0fj07r1i100010010o433233T0v2ug2f0q0y10k93d19w5h5E1bbT0v4u58f0q0x10ob1d03w5h1E1b7T7v4u71f50p61770q72d42g3q0F21a90k762d06HT-SRJJJJIAAAAAh0IaE1c11T1v2u56f0qwx10p711d03A5F5B9Q0001PfaedE4b762663777T1v2u55f0qwx10x411d03A4F2B4Q40c0Pd73bE1b6T3v3ud9f0q0x10l51d03SM005050wwpbaaihE1b2T6v6u06f0q0y10k93d9aW7E1bbT4v3uf0f0q011z6666ji8k8k3jSBKSJJAArriiiiii07JCABrzrrrrrrr00YrkqHrsrrrrjr005zrAqzrjzrrqr1jRjrqGGrrzsrsA099ijrABJJJIAzrrtirqrqjqixzsrAjrqjiqaqqysttAJqjikikrizrHtBJJAzArzrIsRCITKSS099ijrAJS____Qg99habbCAYrDzh00E0T4v3uf0f0q011z6666ji8k8k3jSBKSJJAArriiiiii07JCABrzrrrrrrr00YrkqHrsrrrrjr005zrAqzrjzrrqr1jRjrqGGrrzsrsA099ijrABJJJIAzrrtirqrqjqixzsrAjrqjiqaqqysttAJqjikikrizrHtBJJAzArzrIsRCITKSS099ijrAJS____Qg99habbCAYrDzh00E0T4v3uf0f0q011z6666ji8k8k3jSBKSJJAArriiiiii07JCABrzrrrrrrr00YrkqHrsrrrrjr005zrAqzrjzrrqr1jRjrqGGrrzsrsA099ijrABJJJIAzrrtirqrqjqixzsrAjrqjiqaqqysttAJqjikikrizrHtBJJAzArzrIsRCITKSS099ijrAJS____Qg99habbCAYrDzh00E0b004w0000000h4w00000000004x8000004h4y8w0000000N8i0000010w420000004h8h4g00000h4h4h000000p23iGpvW3wY0kQu6jbEyUyhRAsyhR4th7mhR4uNB2Vh7mhS4th7khRVhjga1jq-ewr6rnOdxVz0ObeK0kQvO4EFE8Waqqqaq2eyDGkkk4t17ghQkk4t55005dHUW1IpJv8S7Cc38IWWFB_EfGo5npvYnQuMuFLhYE0ar541jgkQ5d1jFEOl2qYT9EOi-wLOa00aqcBhhhhhhhhhhhhhhg0 -->
+<html lang="en" eagle-extension-theme="light" eagle-extension-locale="en-US" eagle-extension-os="Windows" class="obtrusive-scrollbars"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>BeepBox</title>
+	<meta name="application-name" content="BeepBox">
+	<meta name="apple-mobile-web-app-title" content="BeepBox">
+	<meta name="description" content="BeepBox is an online tool for sketching and sharing instrumental music.">
+	<meta name="keywords" content="chiptune, instrumental, music, song, melody, composition, tool, free, BeepBox">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="theme-color" content="#444">
+	<meta name="msapplication-TileColor" content="#603cba">
+	<meta name="msapplication-config" content="/browserconfig.xml">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="apple-touch-icon" sizes="180x180" href="https://www.beepbox.co/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="https://www.beepbox.co/icon_32.png">
+	<link rel="manifest" href="https://www.beepbox.co/manifest.webmanifest">
+	<link href="./BeepBox_files/css" rel="stylesheet" media="all" onload="if (this.media != &#39;all&#39;) this.media=&#39;all&#39;;"> <!-- this is a trick to load CSS asynchronously. -->
+	<style type="text/css">
+		html {
+			background: var(--page-margin, black);
+			overflow-x: hidden;
+			font-size: large;
+			font-family: 'Roboto', sans-serif;
+			line-height: 1.3;
+			color: var(--primary-text, white);
+		}
+		body {
+			margin: auto;
+			overflow-x: hidden;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			align-content: center;
+		}
+		#beepboxEditorContainer {
+			min-height: 645px;
+			overflow: auto;
+			background: var(--editor-background, black);
+			width: 100%;
+			max-width: 710px;
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+		#text-content {
+			overflow: auto;
+			background: var(--editor-background, black);
+			width: 100%;
+			max-width: 710px;
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+		h1 {
+			font-size: 1.7rem;
+			text-align: center;
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+			-webkit-text-stroke-width: 0;
+		}
+		h2 {
+			font-size: 1.5rem;
+			text-align: center;
+			margin-top: 0.5em;
+			margin-bottom: 0.5em;
+			-webkit-text-stroke-width: 0;
+		}
+		a {
+			color: var(--link-accent, #98f);
+		}
+		.donation form {
+			display: inline;
+		}
+		.donation input[type="submit"] {
+			-webkit-appearance: none;
+			appearance: none;
+			background: none;
+			border: none;
+			font-family: inherit;
+			font-size: inherit;
+			color: var(--link-accent, #98f);
+			text-decoration: underline;
+			cursor: pointer;
+			padding: 0;
+			margin: 0;
+		}
+		
+		/* wide screen */
+		@media (min-width: 711px) {
+			html {
+				width: 100%;
+			}
+			body {
+				width: 100%;
+			}
+			.column-container {
+				width: 710px;
+				display: flex;
+				gap: 25px;
+			}
+			.instructions-column {
+				min-width: 0;
+			}
+		}
+		
+		/* narrow screen */
+		@media (max-width: 710px) {
+			body {
+				width: 100%;
+			}
+			p, .donation {
+				margin: 1em 0.5em;
+			}
+			.column-container {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+			}
+		}
+	</style>
+<script type="text/javascript" src="./BeepBox_files/beepbox_editor.min.js.download"></script><style>.swal2-popup.swal2-toast{box-sizing:border-box;grid-column:1/4 !important;grid-row:1/4 !important;grid-template-columns:min-content auto min-content;padding:1em;overflow-y:hidden;background:#fff;box-shadow:0 0 1px rgba(0,0,0,.075),0 1px 2px rgba(0,0,0,.075),1px 2px 4px rgba(0,0,0,.075),1px 3px 8px rgba(0,0,0,.075),2px 4px 16px rgba(0,0,0,.075);pointer-events:all}.swal2-popup.swal2-toast>*{grid-column:2}.swal2-popup.swal2-toast .swal2-title{margin:.5em 1em;padding:0;font-size:1em;text-align:initial}.swal2-popup.swal2-toast .swal2-loading{justify-content:center}.swal2-popup.swal2-toast .swal2-input{height:2em;margin:.5em;font-size:1em}.swal2-popup.swal2-toast .swal2-validation-message{font-size:1em}.swal2-popup.swal2-toast .swal2-footer{margin:.5em 0 0;padding:.5em 0 0;font-size:.8em}.swal2-popup.swal2-toast .swal2-close{grid-column:3/3;grid-row:1/99;align-self:center;width:.8em;height:.8em;margin:0;font-size:2em}.swal2-popup.swal2-toast .swal2-html-container{margin:.5em 1em;padding:0;overflow:initial;font-size:1em;text-align:initial}.swal2-popup.swal2-toast .swal2-html-container:empty{padding:0}.swal2-popup.swal2-toast .swal2-loader{grid-column:1;grid-row:1/99;align-self:center;width:2em;height:2em;margin:.25em}.swal2-popup.swal2-toast .swal2-icon{grid-column:1;grid-row:1/99;align-self:center;width:2em;min-width:2em;height:2em;margin:0 .5em 0 0}.swal2-popup.swal2-toast .swal2-icon .swal2-icon-content{display:flex;align-items:center;font-size:1.8em;font-weight:bold}.swal2-popup.swal2-toast .swal2-icon.swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line]{top:.875em;width:1.375em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:.3125em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:.3125em}.swal2-popup.swal2-toast .swal2-actions{justify-content:flex-start;height:auto;margin:0;margin-top:.5em;padding:0 .5em}.swal2-popup.swal2-toast .swal2-styled{margin:.25em .5em;padding:.4em .6em;font-size:1em}.swal2-popup.swal2-toast .swal2-success{border-color:#a5dc86}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line]{position:absolute;width:1.6em;height:3em;transform:rotate(45deg);border-radius:50%}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=left]{top:-0.8em;left:-0.5em;transform:rotate(-45deg);transform-origin:2em 2em;border-radius:4em 0 0 4em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=right]{top:-0.25em;left:.9375em;transform-origin:0 1.5em;border-radius:0 4em 4em 0}.swal2-popup.swal2-toast .swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-popup.swal2-toast .swal2-success .swal2-success-fix{top:0;left:.4375em;width:.4375em;height:2.6875em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line]{height:.3125em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=tip]{top:1.125em;left:.1875em;width:.75em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=long]{top:.9375em;right:.1875em;width:1.375em}.swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-tip{animation:swal2-toast-animate-success-line-tip .75s}.swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-long{animation:swal2-toast-animate-success-line-long .75s}.swal2-popup.swal2-toast.swal2-show{animation:swal2-toast-show .5s}.swal2-popup.swal2-toast.swal2-hide{animation:swal2-toast-hide .1s forwards}.swal2-container{display:grid;position:fixed;z-index:1060;top:0;right:0;bottom:0;left:0;box-sizing:border-box;grid-template-areas:"top-start     top            top-end" "center-start  center         center-end" "bottom-start  bottom-center  bottom-end";grid-template-rows:minmax(min-content, auto) minmax(min-content, auto) minmax(min-content, auto);height:100%;padding:.625em;overflow-x:hidden;transition:background-color .1s;-webkit-overflow-scrolling:touch}.swal2-container.swal2-backdrop-show,.swal2-container.swal2-noanimation{background:rgba(0,0,0,.4)}.swal2-container.swal2-backdrop-hide{background:rgba(0,0,0,0) !important}.swal2-container.swal2-top-start,.swal2-container.swal2-center-start,.swal2-container.swal2-bottom-start{grid-template-columns:minmax(0, 1fr) auto auto}.swal2-container.swal2-top,.swal2-container.swal2-center,.swal2-container.swal2-bottom{grid-template-columns:auto minmax(0, 1fr) auto}.swal2-container.swal2-top-end,.swal2-container.swal2-center-end,.swal2-container.swal2-bottom-end{grid-template-columns:auto auto minmax(0, 1fr)}.swal2-container.swal2-top-start>.swal2-popup{align-self:start}.swal2-container.swal2-top>.swal2-popup{grid-column:2;align-self:start;justify-self:center}.swal2-container.swal2-top-end>.swal2-popup,.swal2-container.swal2-top-right>.swal2-popup{grid-column:3;align-self:start;justify-self:end}.swal2-container.swal2-center-start>.swal2-popup,.swal2-container.swal2-center-left>.swal2-popup{grid-row:2;align-self:center}.swal2-container.swal2-center>.swal2-popup{grid-column:2;grid-row:2;align-self:center;justify-self:center}.swal2-container.swal2-center-end>.swal2-popup,.swal2-container.swal2-center-right>.swal2-popup{grid-column:3;grid-row:2;align-self:center;justify-self:end}.swal2-container.swal2-bottom-start>.swal2-popup,.swal2-container.swal2-bottom-left>.swal2-popup{grid-column:1;grid-row:3;align-self:end}.swal2-container.swal2-bottom>.swal2-popup{grid-column:2;grid-row:3;justify-self:center;align-self:end}.swal2-container.swal2-bottom-end>.swal2-popup,.swal2-container.swal2-bottom-right>.swal2-popup{grid-column:3;grid-row:3;align-self:end;justify-self:end}.swal2-container.swal2-grow-row>.swal2-popup,.swal2-container.swal2-grow-fullscreen>.swal2-popup{grid-column:1/4;width:100%}.swal2-container.swal2-grow-column>.swal2-popup,.swal2-container.swal2-grow-fullscreen>.swal2-popup{grid-row:1/4;align-self:stretch}.swal2-container.swal2-no-transition{transition:none !important}.swal2-popup{display:none;position:relative;box-sizing:border-box;grid-template-columns:minmax(0, 100%);width:32em;max-width:100%;padding:0 0 1.25em;border:none;border-radius:5px;background:#fff;color:#545454;font-family:inherit;font-size:1rem}.swal2-popup:focus{outline:none}.swal2-popup.swal2-loading{overflow-y:hidden}.swal2-title{position:relative;max-width:100%;margin:0;padding:.8em 1em 0;color:inherit;font-size:1.875em;font-weight:600;text-align:center;text-transform:none;word-wrap:break-word}.swal2-actions{display:flex;z-index:1;box-sizing:border-box;flex-wrap:wrap;align-items:center;justify-content:center;width:auto;margin:1.25em auto 0;padding:0}.swal2-actions:not(.swal2-loading) .swal2-styled[disabled]{opacity:.4}.swal2-actions:not(.swal2-loading) .swal2-styled:hover{background-image:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1))}.swal2-actions:not(.swal2-loading) .swal2-styled:active{background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))}.swal2-loader{display:none;align-items:center;justify-content:center;width:2.2em;height:2.2em;margin:0 1.875em;animation:swal2-rotate-loading 1.5s linear 0s infinite normal;border-width:.25em;border-style:solid;border-radius:100%;border-color:#2778c4 rgba(0,0,0,0) #2778c4 rgba(0,0,0,0)}.swal2-styled{margin:.3125em;padding:.625em 1.1em;transition:box-shadow .1s;box-shadow:0 0 0 3px rgba(0,0,0,0);font-weight:500}.swal2-styled:not([disabled]){cursor:pointer}.swal2-styled.swal2-confirm{border:0;border-radius:.25em;background:initial;background-color:#7066e0;color:#fff;font-size:1em}.swal2-styled.swal2-confirm:focus{box-shadow:0 0 0 3px rgba(112,102,224,.5)}.swal2-styled.swal2-deny{border:0;border-radius:.25em;background:initial;background-color:#dc3741;color:#fff;font-size:1em}.swal2-styled.swal2-deny:focus{box-shadow:0 0 0 3px rgba(220,55,65,.5)}.swal2-styled.swal2-cancel{border:0;border-radius:.25em;background:initial;background-color:#6e7881;color:#fff;font-size:1em}.swal2-styled.swal2-cancel:focus{box-shadow:0 0 0 3px rgba(110,120,129,.5)}.swal2-styled.swal2-default-outline:focus{box-shadow:0 0 0 3px rgba(100,150,200,.5)}.swal2-styled:focus{outline:none}.swal2-styled::-moz-focus-inner{border:0}.swal2-footer{justify-content:center;margin:1em 0 0;padding:1em 1em 0;border-top:1px solid #eee;color:inherit;font-size:1em}.swal2-timer-progress-bar-container{position:absolute;right:0;bottom:0;left:0;grid-column:auto !important;overflow:hidden;border-bottom-right-radius:5px;border-bottom-left-radius:5px}.swal2-timer-progress-bar{width:100%;height:.25em;background:rgba(0,0,0,.2)}.swal2-image{max-width:100%;margin:2em auto 1em}.swal2-close{z-index:2;align-items:center;justify-content:center;width:1.2em;height:1.2em;margin-top:0;margin-right:0;margin-bottom:-1.2em;padding:0;overflow:hidden;transition:color .1s,box-shadow .1s;border:none;border-radius:5px;background:rgba(0,0,0,0);color:#ccc;font-family:serif;font-family:monospace;font-size:2.5em;cursor:pointer;justify-self:end}.swal2-close:hover{transform:none;background:rgba(0,0,0,0);color:#f27474}.swal2-close:focus{outline:none;box-shadow:inset 0 0 0 3px rgba(100,150,200,.5)}.swal2-close::-moz-focus-inner{border:0}.swal2-html-container{z-index:1;justify-content:center;margin:1em 1.6em .3em;padding:0;overflow:auto;color:inherit;font-size:1.125em;font-weight:normal;line-height:normal;text-align:center;word-wrap:break-word;word-break:break-word}.swal2-input,.swal2-file,.swal2-textarea,.swal2-select,.swal2-radio,.swal2-checkbox{margin:1em 2em 3px}.swal2-input,.swal2-file,.swal2-textarea{box-sizing:border-box;width:auto;transition:border-color .1s,box-shadow .1s;border:1px solid #d9d9d9;border-radius:.1875em;background:rgba(0,0,0,0);box-shadow:inset 0 1px 1px rgba(0,0,0,.06),0 0 0 3px rgba(0,0,0,0);color:inherit;font-size:1.125em}.swal2-input.swal2-inputerror,.swal2-file.swal2-inputerror,.swal2-textarea.swal2-inputerror{border-color:#f27474 !important;box-shadow:0 0 2px #f27474 !important}.swal2-input:focus,.swal2-file:focus,.swal2-textarea:focus{border:1px solid #b4dbed;outline:none;box-shadow:inset 0 1px 1px rgba(0,0,0,.06),0 0 0 3px rgba(100,150,200,.5)}.swal2-input::placeholder,.swal2-file::placeholder,.swal2-textarea::placeholder{color:#ccc}.swal2-range{margin:1em 2em 3px;background:#fff}.swal2-range input{width:80%}.swal2-range output{width:20%;color:inherit;font-weight:600;text-align:center}.swal2-range input,.swal2-range output{height:2.625em;padding:0;font-size:1.125em;line-height:2.625em}.swal2-input{height:2.625em;padding:0 .75em}.swal2-file{width:75%;margin-right:auto;margin-left:auto;background:rgba(0,0,0,0);font-size:1.125em}.swal2-textarea{height:6.75em;padding:.75em}.swal2-select{min-width:50%;max-width:100%;padding:.375em .625em;background:rgba(0,0,0,0);color:inherit;font-size:1.125em}.swal2-radio,.swal2-checkbox{align-items:center;justify-content:center;background:#fff;color:inherit}.swal2-radio label,.swal2-checkbox label{margin:0 .6em;font-size:1.125em}.swal2-radio input,.swal2-checkbox input{flex-shrink:0;margin:0 .4em}.swal2-input-label{display:flex;justify-content:center;margin:1em auto 0}.swal2-validation-message{align-items:center;justify-content:center;margin:1em 0 0;padding:.625em;overflow:hidden;background:#f0f0f0;color:#666;font-size:1em;font-weight:300}.swal2-validation-message::before{content:"!";display:inline-block;width:1.5em;min-width:1.5em;height:1.5em;margin:0 .625em;border-radius:50%;background-color:#f27474;color:#fff;font-weight:600;line-height:1.5em;text-align:center}.swal2-icon{position:relative;box-sizing:content-box;justify-content:center;width:5em;height:5em;margin:2.5em auto .6em;border:0.25em solid rgba(0,0,0,0);border-radius:50%;border-color:#000;font-family:inherit;line-height:5em;cursor:default;user-select:none}.swal2-icon .swal2-icon-content{display:flex;align-items:center;font-size:3.75em}.swal2-icon.swal2-error{border-color:#f27474;color:#f27474}.swal2-icon.swal2-error .swal2-x-mark{position:relative;flex-grow:1}.swal2-icon.swal2-error [class^=swal2-x-mark-line]{display:block;position:absolute;top:2.3125em;width:2.9375em;height:.3125em;border-radius:.125em;background-color:#f27474}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:1.0625em;transform:rotate(45deg)}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:1em;transform:rotate(-45deg)}.swal2-icon.swal2-error.swal2-icon-show{animation:swal2-animate-error-icon .5s}.swal2-icon.swal2-error.swal2-icon-show .swal2-x-mark{animation:swal2-animate-error-x-mark .5s}.swal2-icon.swal2-warning{border-color:#facea8;color:#f8bb86}.swal2-icon.swal2-warning.swal2-icon-show{animation:swal2-animate-error-icon .5s}.swal2-icon.swal2-warning.swal2-icon-show .swal2-icon-content{animation:swal2-animate-i-mark .5s}.swal2-icon.swal2-info{border-color:#9de0f6;color:#3fc3ee}.swal2-icon.swal2-info.swal2-icon-show{animation:swal2-animate-error-icon .5s}.swal2-icon.swal2-info.swal2-icon-show .swal2-icon-content{animation:swal2-animate-i-mark .8s}.swal2-icon.swal2-question{border-color:#c9dae1;color:#87adbd}.swal2-icon.swal2-question.swal2-icon-show{animation:swal2-animate-error-icon .5s}.swal2-icon.swal2-question.swal2-icon-show .swal2-icon-content{animation:swal2-animate-question-mark .8s}.swal2-icon.swal2-success{border-color:#a5dc86;color:#a5dc86}.swal2-icon.swal2-success [class^=swal2-success-circular-line]{position:absolute;width:3.75em;height:7.5em;transform:rotate(45deg);border-radius:50%}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=left]{top:-0.4375em;left:-2.0635em;transform:rotate(-45deg);transform-origin:3.75em 3.75em;border-radius:7.5em 0 0 7.5em}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=right]{top:-0.6875em;left:1.875em;transform:rotate(-45deg);transform-origin:0 3.75em;border-radius:0 7.5em 7.5em 0}.swal2-icon.swal2-success .swal2-success-ring{position:absolute;z-index:2;top:-0.25em;left:-0.25em;box-sizing:content-box;width:100%;height:100%;border:.25em solid rgba(165,220,134,.3);border-radius:50%}.swal2-icon.swal2-success .swal2-success-fix{position:absolute;z-index:1;top:.5em;left:1.625em;width:.4375em;height:5.625em;transform:rotate(-45deg)}.swal2-icon.swal2-success [class^=swal2-success-line]{display:block;position:absolute;z-index:2;height:.3125em;border-radius:.125em;background-color:#a5dc86}.swal2-icon.swal2-success [class^=swal2-success-line][class$=tip]{top:2.875em;left:.8125em;width:1.5625em;transform:rotate(45deg)}.swal2-icon.swal2-success [class^=swal2-success-line][class$=long]{top:2.375em;right:.5em;width:2.9375em;transform:rotate(-45deg)}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-tip{animation:swal2-animate-success-line-tip .75s}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-long{animation:swal2-animate-success-line-long .75s}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-circular-line-right{animation:swal2-rotate-success-circular-line 4.25s ease-in}.swal2-progress-steps{flex-wrap:wrap;align-items:center;max-width:100%;margin:1.25em auto;padding:0;background:rgba(0,0,0,0);font-weight:600}.swal2-progress-steps li{display:inline-block;position:relative}.swal2-progress-steps .swal2-progress-step{z-index:20;flex-shrink:0;width:2em;height:2em;border-radius:2em;background:#2778c4;color:#fff;line-height:2em;text-align:center}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step{background:#2778c4}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step{background:#add8e6;color:#fff}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step-line{background:#add8e6}.swal2-progress-steps .swal2-progress-step-line{z-index:10;flex-shrink:0;width:2.5em;height:.4em;margin:0 -1px;background:#2778c4}[class^=swal2]{-webkit-tap-highlight-color:rgba(0,0,0,0)}.swal2-show{animation:swal2-show .3s}.swal2-hide{animation:swal2-hide .15s forwards}.swal2-noanimation{transition:none}.swal2-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}.swal2-rtl .swal2-close{margin-right:initial;margin-left:0}.swal2-rtl .swal2-timer-progress-bar{right:0;left:auto}@keyframes swal2-toast-show{0%{transform:translateY(-0.625em) rotateZ(2deg)}33%{transform:translateY(0) rotateZ(-2deg)}66%{transform:translateY(0.3125em) rotateZ(2deg)}100%{transform:translateY(0) rotateZ(0deg)}}@keyframes swal2-toast-hide{100%{transform:rotateZ(1deg);opacity:0}}@keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-0.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}@keyframes swal2-show{0%{transform:scale(0.7)}45%{transform:scale(1.05)}80%{transform:scale(0.95)}100%{transform:scale(1)}}@keyframes swal2-hide{0%{transform:scale(1);opacity:1}100%{transform:scale(0.5);opacity:0}}@keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-0.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.8125em;width:1.5625em}}@keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(0.4);opacity:0}50%{margin-top:1.625em;transform:scale(0.4);opacity:0}80%{margin-top:-0.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0deg);opacity:1}}@keyframes swal2-rotate-loading{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}@keyframes swal2-animate-question-mark{0%{transform:rotateY(-360deg)}100%{transform:rotateY(0)}}@keyframes swal2-animate-i-mark{0%{transform:rotateZ(45deg);opacity:0}25%{transform:rotateZ(-25deg);opacity:.4}50%{transform:rotateZ(15deg);opacity:.8}75%{transform:rotateZ(-5deg);opacity:1}100%{transform:rotateX(0);opacity:1}}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){overflow:hidden}body.swal2-height-auto{height:auto !important}body.swal2-no-backdrop .swal2-container{background-color:rgba(0,0,0,0) !important;pointer-events:none}body.swal2-no-backdrop .swal2-container .swal2-popup{pointer-events:all}body.swal2-no-backdrop .swal2-container .swal2-modal{box-shadow:0 0 10px rgba(0,0,0,.4)}@media print{body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){overflow-y:scroll !important}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown)>[aria-hidden=true]{display:none}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) .swal2-container{position:static !important}}body.swal2-toast-shown .swal2-container{box-sizing:border-box;width:360px;max-width:100%;background-color:rgba(0,0,0,0);pointer-events:none}body.swal2-toast-shown .swal2-container.swal2-top{top:0;right:auto;bottom:auto;left:50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-top-end,body.swal2-toast-shown .swal2-container.swal2-top-right{top:0;right:0;bottom:auto;left:auto}body.swal2-toast-shown .swal2-container.swal2-top-start,body.swal2-toast-shown .swal2-container.swal2-top-left{top:0;right:auto;bottom:auto;left:0}body.swal2-toast-shown .swal2-container.swal2-center-start,body.swal2-toast-shown .swal2-container.swal2-center-left{top:50%;right:auto;bottom:auto;left:0;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-center{top:50%;right:auto;bottom:auto;left:50%;transform:translate(-50%, -50%)}body.swal2-toast-shown .swal2-container.swal2-center-end,body.swal2-toast-shown .swal2-container.swal2-center-right{top:50%;right:0;bottom:auto;left:auto;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-start,body.swal2-toast-shown .swal2-container.swal2-bottom-left{top:auto;right:auto;bottom:0;left:0}body.swal2-toast-shown .swal2-container.swal2-bottom{top:auto;right:auto;bottom:0;left:50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-end,body.swal2-toast-shown .swal2-container.swal2-bottom-right{top:auto;right:0;bottom:0;left:auto}</style><style type="text/css">
+			:root {
+				--page-margin: black;
+				--editor-background: black;
+				--hover-preview: white;
+				--playhead: white;
+				--primary-text: white;
+				--secondary-text: #999;
+				--inverted-text: black;
+				--text-selection: rgba(119,68,255,0.99);
+				--box-selection-fill: rgba(255,255,255,0.2);
+				--loop-accent: #74f;
+				--link-accent: #98f;
+				--ui-widget-background: #444;
+				--ui-widget-focus: #777;
+				--pitch-background: #444;
+				--tonic: #864;
+				--fifth-note: #468;
+				--white-piano-key: #bbb;
+				--black-piano-key: #444;
+				--pitch1-secondary-channel: #0099A1;
+				--pitch1-primary-channel:   #25F3FF;
+				--pitch1-secondary-note:    #00BDC7;
+				--pitch1-primary-note:      #92F9FF;
+				--pitch2-secondary-channel: #A1A100;
+				--pitch2-primary-channel:   #FFFF25;
+				--pitch2-secondary-note:    #C7C700;
+				--pitch2-primary-note:      #FFFF92;
+				--pitch3-secondary-channel: #C75000;
+				--pitch3-primary-channel:   #FF9752;
+				--pitch3-secondary-note:    #FF771C;
+				--pitch3-primary-note:      #FFCDAB;
+				--pitch4-secondary-channel: #00A100;
+				--pitch4-primary-channel:   #50FF50;
+				--pitch4-secondary-note:    #00C700;
+				--pitch4-primary-note:      #A0FFA0;
+				--pitch5-secondary-channel: #D020D0;
+				--pitch5-primary-channel:   #FF90FF;
+				--pitch5-secondary-note:    #E040E0;
+				--pitch5-primary-note:      #FFC0FF;
+				--pitch6-secondary-channel: #7777B0;
+				--pitch6-primary-channel:   #A0A0FF;
+				--pitch6-secondary-note:    #8888D0;
+				--pitch6-primary-note:      #D0D0FF;
+				--pitch7-secondary-channel: #8AA100;
+				--pitch7-primary-channel:   #DEFF25;
+				--pitch7-secondary-note:    #AAC700;
+				--pitch7-primary-note:      #E6FF92;
+				--pitch8-secondary-channel: #DF0019;
+				--pitch8-primary-channel:   #FF98A4;
+				--pitch8-secondary-note:    #FF4E63;
+				--pitch8-primary-note:      #FFB2BB;
+				--pitch9-secondary-channel: #00A170;
+				--pitch9-primary-channel:   #50FFC9;
+				--pitch9-secondary-note:    #00C78A;
+				--pitch9-primary-note:      #83FFD9;
+				--pitch10-secondary-channel:#A11FFF;
+				--pitch10-primary-channel:  #CE8BFF;
+				--pitch10-secondary-note:   #B757FF;
+				--pitch10-primary-note:     #DFACFF;
+				--noise1-secondary-channel: #6F6F6F;
+				--noise1-primary-channel:   #AAAAAA;
+				--noise1-secondary-note:    #A7A7A7;
+				--noise1-primary-note:      #E0E0E0;
+				--noise2-secondary-channel: #996633;
+				--noise2-primary-channel:   #DDAA77;
+				--noise2-secondary-note:    #CC9966;
+				--noise2-primary-note:      #F0D0BB;
+				--noise3-secondary-channel: #4A6D8F;
+				--noise3-primary-channel:   #77AADD;
+				--noise3-secondary-note:    #6F9FCF;
+				--noise3-primary-note:      #BBD7FF;
+				--noise4-secondary-channel: #7A4F9A;
+				--noise4-primary-channel:   #AF82D2;
+				--noise4-secondary-note:    #9E71C1;
+				--noise4-primary-note:      #D4C1EA;
+				--noise5-secondary-channel: #607837;
+				--noise5-primary-channel:   #A2BB77;
+				--noise5-secondary-note:    #91AA66;
+				--noise5-primary-note:      #C5E2B2;
+			}
+		</style><style type="text/css">
+
+/* Note: "#" symbols need to be encoded as "%23" in SVG data urls, otherwise they are interpreted as fragment identifiers! */
+:root {
+	--button-size: 26px;
+	--settings-area-width: 192px;
+	--play-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="-13 -13 26 26"><path d="M -5 -8 L -5 8 L 8 0 z" fill="gray"/></svg>');
+	--pause-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="-13 -13 26 26"><rect x="-5" y="-7" width="4" height="14" fill="gray"/><rect x="3" y="-7" width="4" height="14" fill="gray"/></svg>');
+	--record-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="-13 -13 26 26"><circle cx="0" cy="0" r="6" fill="gray"/></svg>');
+	--stop-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="-13 -13 26 26"><rect x="-6" y="-6" width="12" height="12" fill="gray"/></svg>');
+	--prev-bar-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="-13 -13 26 26"><rect x="-6" y="-6" width="2" height="12" fill="gray"/><path d="M 6 -6 L 6 6 L -3 0 z" fill="gray"/></svg>');
+	--next-bar-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="-13 -13 26 26"><rect x="4" y="-6" width="2" height="12" fill="gray"/><path d="M -6 -6 L -6 6 L 3 0 z" fill="gray"/></svg>');
+	--volume-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26"><path d="M 4 16 L 4 10 L 8 10 L 13 5 L 13 21 L 8 16 z M 15 11 L 16 10 A 7.2 7.2 0 0 1 16 16 L 15 15 A 5.8 5.8 0 0 0 15 12 z M 18 8 L 19 7 A 11.5 11.5 0 0 1 19 19 L 18 18 A 10.1 10.1 0 0 0 18 8 z" fill="gray"/></svg>');
+	--unmuted-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="3 3 20 20"><path d="M 4 16 L 4 10 L 8 10 L 13 5 L 13 21 L 8 16 z M 15 11 L 16 10 A 7.2 7.2 0 0 1 16 16 L 15 15 A 5.8 5.8 0 0 0 15 12 z M 18 8 L 19 7 A 11.5 11.5 0 0 1 19 19 L 18 18 A 10.1 10.1 0 0 0 18 8 z" fill="gray"/></svg>');
+	--muted-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="3 3 20 20"><path d="M 4 16 L 4 10 L 8 10 L 13 5 L 13 21 L 8 16 z" fill="gray"/></svg>');
+	--menu-down-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="-13 -13 26 26"><path d="M -4 -2 L 4 -2 L 0 3 z" fill="gray"/></svg>');
+	--select-arrows-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="-13 -13 26 26"><path d="M -4 -3 L 4 -3 L 0 -8 z M -4 3 L 4 3 L 0 8 z" fill="gray"/></svg>');
+	--file-page-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="-5 -21 26 26"><path d="M 2 0 L 2 -16 L 10 -16 L 14 -12 L 14 0 z M 3 -1 L 13 -1 L 13 -11 L 9 -11 L 9 -15 L 3 -15 z" fill="gray"/></svg>');
+	--edit-pencil-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="-5 -21 26 26"><path d="M 0 0 L 1 -4 L 4 -1 z M 2 -5 L 10 -13 L 13 -10 L 5 -2 zM 11 -14 L 13 -16 L 14 -16 L 16 -14 L 16 -13 L 14 -11 z" fill="gray"/></svg>');
+	--preferences-gear-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="-13 -13 26 26"><path d="M 5.78 -1.6 L 7.93 -0.94 L 7.93 0.94 L 5.78 1.6 L 4.85 3.53 L 5.68 5.61 L 4.21 6.78 L 2.36 5.52 L 0.27 5.99 L -0.85 7.94 L -2.68 7.52 L -2.84 5.28 L -4.52 3.95 L -6.73 4.28 L -7.55 2.59 L -5.9 1.07 L -5.9 -1.07 L -7.55 -2.59 L -6.73 -4.28 L -4.52 -3.95 L -2.84 -5.28 L -2.68 -7.52 L -0.85 -7.94 L 0.27 -5.99 L 2.36 -5.52 L 4.21 -6.78 L 5.68 -5.61 L 4.85 -3.53 M 2.92 0.67 L 2.92 -0.67 L 2.35 -1.87 L 1.3 -2.7 L 0 -3 L -1.3 -2.7 L -2.35 -1.87 L -2.92 -0.67 L -2.92 0.67 L -2.35 1.87 L -1.3 2.7 L -0 3 L 1.3 2.7 L 2.35 1.87 z" fill="gray"/></svg>');
+	--customize-dial-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="-13 -13 26 26"> 			<g transform="translate(0,1)" fill="gray"> 				<circle cx="0" cy="0" r="6.5" stroke="gray" stroke-width="1" fill="none"/> 				<rect x="-1" y="-5" width="2" height="4" transform="rotate(30)"/> 				<circle cx="-7.79" cy="4.5" r="0.75"/> 				<circle cx="-9" cy="0" r="0.75"/> 				<circle cx="-7.79" cy="-4.5" r="0.75"/> 				<circle cx="-4.5" cy="-7.79" r="0.75"/> 				<circle cx="0" cy="-9" r="0.75"/> 				<circle cx="4.5" cy="-7.79" r="0.75"/> 				<circle cx="7.79" cy="-4.5" r="0.75"/> 				<circle cx="9" cy="0" r="0.75"/> 				<circle cx="7.79" cy="4.5" r="0.75"/> 			</g> 		</svg>');
+	--instrument-copy-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="-5 -21 26 26"><path d="M 0 -15 L 1 -15 L 1 0 L 13 0 L 13 1 L 0 1 L 0 -15 z M 2 -1 L 2 -17 L 10 -17 L 14 -13 L 14 -1 z M 3 -2 L 13 -2 L 13 -12 L 9 -12 L 9 -16 L 3 -16 z" fill="currentColor"></path></svg>');
+	--instrument-paste-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26"><path d="M 8 18 L 6 18 L 6 5 L 17 5 L 17 7 M 9 8 L 16 8 L 20 12 L 20 22 L 9 22 z" stroke="currentColor" fill="none"></path><path d="M 9 3 L 14 3 L 14 6 L 9 6 L 9 3 z M 16 8 L 20 12 L 16 12 L 16 8 z" fill="currentColor"></path></svg>');
+	--export-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="-13 -13 26 26"><path fill="gray" d="M -8 3 L -8 8 L 8 8 L 8 3 L 6 3 L 6 6 L -6 6 L -6 3 z M 0 2 L -4 -2 L -1 -2 L -1 -8 L 1 -8 L 1 -2 L 4 -2 z"/></svg>');
+	--close-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="-13 -13 26 26"><path fill="gray" d="M -7.07 -5.66 L -5.66 -7.07 L 0 -1.4 L 5.66 -7.07 L 7.07 -5.66 L 1.4 0 L 7.07 5.66 L 5.66 7.07 L 0 1.4 L -5.66 7.07 L -7.07 5.66 L -1.4 0 z"/></svg>');
+	--add-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="-13 -13 26 26"><path fill="gray" d="M -8 -1 L -1 -1 L -1 -8  L 1 -8 L 1 -1 L 8 -1 L 8 1 L 1 1 L 1 8 L -1 8 L -1 1 L -8 1 z"/></svg>');
+	--zoom-in-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="-10 -10 20 20"><circle cx="-1" cy="-1" r="6" stroke-width="2" stroke="gray" fill="none"></circle><path stroke="gray" stroke-width="2" d="M 3 3 L 7 7 M -1 -4 L -1 2 M -4 -1 L 2 -1" fill="none"></path></svg>');
+	--zoom-out-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="-10 -10 20 20"><circle cx="-1" cy="-1" r="6" stroke-width="2" stroke="gray" fill="none"></circle><path stroke="gray" stroke-width="2" d="M 3 3 L 7 7 M -4 -1 L 2 -1" fill="none"></path></svg>');
+	--checkmark-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="-13 -13 26 26"><path fill="gray" d="M -9 -2 L -8 -3 L -3 2 L 9 -8 L 10 -7 L -3 8 z"/></svg>');
+	--drum-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="40" viewBox="0 0 32 40"> 			<defs> 				<linearGradient id="gold1" x1="0%" y1="0%" x2="100%" y2="0%"> 					<stop offset="0%" stop-color="%237e3302"/> 					<stop offset="40%" stop-color="%23ffec6b"/> 					<stop offset="100%" stop-color="%237e3302"/> 				</linearGradient> 				<linearGradient id="gold2" x1="0%" y1="0%" x2="100%" y2="0%"> 					<stop offset="0%" stop-color="%23faaf7d"/> 					<stop offset="15%" stop-color="%23fffba9"/> 					<stop offset="40%" stop-color="%23ffffe3"/> 					<stop offset="65%" stop-color="%23fffba9"/> 					<stop offset="100%" stop-color="%23faaf7d"/> 				</linearGradient> 				<radialGradient id="gold3" cx="0%" cy="0%" r="100%"> 					<stop offset="0%" stop-color="%23ffffe3"/> 					<stop offset="50%" stop-color="%23ffec6b"/> 					<stop offset="100%" stop-color="%237e3302"/> 				</radialGradient> 				<linearGradient id="red" x1="0%" y1="0%" x2="100%" y2="0%"> 					<stop offset="0%" stop-color="%23641919"/> 					<stop offset="40%" stop-color="%23cd2c2c"/> 					<stop offset="100%" stop-color="%23641919"/> 				</linearGradient> 				<radialGradient id="membrane"> 					<stop offset="10%" stop-color="%23cccccc" /> 					<stop offset="90%" stop-color="%23f6f6f7" /> 					<stop offset="100%" stop-color="%23999" /> 				</radialGradient> 			</defs> 			<ellipse cx="16" cy="26" rx="16" ry="14" fill="rgba(0,0,0,0.5)"/> 			<ellipse cx="16" cy="25" rx="16" ry="14" fill="url(%23gold1)"/> 			<rect x="0" y="23" width="32" height="2" fill="url(%23gold1)"/> 			<ellipse cx="16" cy="23" rx="16" ry="14" fill="url(%23gold2)"/> 			<ellipse cx="16" cy="23" rx="15" ry="13" fill="url(%23red)"/> 			<rect x="1" y="17" width="30" height="6" fill="url(%23red)"/> 			<rect x="5" y="27" width="1" height="5" rx="0.5" fill="rgba(0,0,0,0.5)"/> 			<rect x="15" y="31" width="2" height="5" rx="1" fill="rgba(0,0,0,0.5)"/> 			<rect x="26" y="27" width="1" height="5" rx="0.5" fill="rgba(0,0,0,0.5)"/> 			<rect x="5" y="26" width="1" height="5" rx="0.5" fill="url(%23gold3)"/> 			<rect x="15" y="30" width="2" height="5" rx="1" fill="url(%23gold3)"/> 			<rect x="26" y="26" width="1" height="5" rx="0.5" fill="url(%23gold3)"/> 			<ellipse cx="16" cy="18" rx="15" ry="13" fill="rgba(0,0,0,0.5)"/> 			<ellipse cx="16" cy="16" rx="16" ry="14" fill="url(%23gold1)"/> 			<rect x="0" y="14" width="32" height="2" fill="url(%23gold1)"/> 			<ellipse cx="16" cy="14" rx="16" ry="14" fill="url(%23gold2)"/> 			<ellipse cx="16" cy="14" rx="15" ry="13" fill="url(%23membrane)"/> 		</svg>');
+	--piano-key-symbol: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="15" preserveAspectRatio="none" viewBox="0 -1 32 15"> 			<defs> 				<linearGradient id="shadow" x1="0%" y1="0%" x2="100%" y2="0%"> 					<stop offset="0%" stop-color="rgba(0,0,0,0.5)"/> 					<stop offset="100%" stop-color="transparent"/> 				</linearGradient> 			</defs> 			<rect x="-1" y="1" width="31" height="1" rx="0.6" fill="rgba(255,255,255,0.4)"/> 			<path d="M -1 11 L 30 11 L 30 2 L 33 -1 L 33 14 L -1 14 z" fill="rgba(0,0,0,0.7)"/> 			<rect x="-1" y="-1" width="19" height="15" fill="url(%23shadow)"/> 		</svg>');
+}
+
+
+.obtrusive-scrollbars, .obtrusive-scrollbars * {
+	scrollbar-width: thin;
+	scrollbar-color: var(--ui-widget-background) var(--editor-background);
+}
+.obtrusive-scrollbars::-webkit-scrollbar, .obtrusive-scrollbars *::-webkit-scrollbar {
+	width: 12px;
+}
+.obtrusive-scrollbars::-webkit-scrollbar-track, .obtrusive-scrollbars *::-webkit-scrollbar-track {
+	background: var(--editor-background);
+}
+.obtrusive-scrollbars::-webkit-scrollbar-thumb, .obtrusive-scrollbars *::-webkit-scrollbar-thumb {
+	background-color: var(--ui-widget-background);
+	border: 3px solid var(--editor-background);
+}
+
+
+.beepboxEditor {
+	display: grid;
+    grid-template-columns: minmax(0, 1fr) max-content;
+    grid-template-rows: max-content 1fr; /* max-content minmax(0, 1fr); Chrome 80 grid layout regression. https://bugs.chromium.org/p/chromium/issues/detail?id=1050307 */
+    grid-template-areas: "pattern-area settings-area" "track-area settings-area";
+	grid-column-gap: 6px;
+	grid-row-gap: 6px;
+	position: relative;
+	touch-action: manipulation;
+	cursor: default;
+	font-size: 13px;
+	overflow: hidden;
+	color: var(--primary-text);
+	background: var(--editor-background);
+}
+
+.beepboxEditor .noSelection {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.beepboxEditor div {
+	margin: 0;
+	padding: 0;
+}
+
+.beepboxEditor .pattern-area {
+	grid-area: pattern-area;
+	height: 481px;
+	display: flex;
+	flex-direction: row;
+	position: relative;
+}
+
+.beepboxEditor .track-area {
+	grid-area: track-area;
+}
+
+.beepboxEditor .loopEditor {
+	height: 20px;
+	position: sticky;
+	bottom: 0;
+	padding: 5px 0;
+	background-color: var(--editor-background);
+}
+
+.beepboxEditor .settings-area {
+	grid-area: settings-area;
+	display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: min-content min-content min-content min-content min-content;
+    grid-template-areas: "version-area" "play-pause-area" "menu-area" "song-settings-area" "instrument-settings-area";
+	grid-column-gap: 6px;
+}
+
+.beepboxEditor .version-area{ grid-area: version-area; }
+.beepboxEditor .play-pause-area{ grid-area: play-pause-area; }
+.beepboxEditor .menu-area{ grid-area: menu-area; }
+.beepboxEditor .song-settings-area{ grid-area: song-settings-area; }
+.beepboxEditor .instrument-settings-area{ grid-area: instrument-settings-area; }
+
+.beepboxEditor .tip {
+	cursor: help;
+	color: var(--secondary-text);
+	text-decoration: none;
+}
+
+.beepboxEditor .tip:hover {
+	color: var(--link-accent);
+	text-decoration: underline;
+}
+.beepboxEditor .tip:active {
+	color: var(--primary-text);
+}
+
+.beepboxEditor .volume-speaker {
+	flex-shrink: 0;
+	width: var(--button-size);
+	height: var(--button-size);
+	background: var(--secondary-text);
+	-webkit-mask-image: var(--volume-symbol);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-image: var(--volume-symbol);
+	mask-repeat: no-repeat;
+	mask-position: center;
+}
+
+.beepboxEditor .drum-button {
+	flex: 1;
+	background-color: transparent;
+	background-image: var(--drum-symbol);
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.beepboxEditor .piano-button {
+	flex: 1;
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+.beepboxEditor .piano-button::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	background-image: var(--piano-key-symbol);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100% 115.38%;
+}
+.beepboxEditor .piano-button.disabled::after {
+	content: "";
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 70%;
+	height: 100%;
+	pointer-events: none;
+	background: var(--editor-background);
+	-webkit-mask-image: linear-gradient(90deg, transparent 0%, gray 70%, gray 100%);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-image: linear-gradient(90deg, transparent 0%, gray 70%, gray 100%);
+	mask-repeat: no-repeat;
+	mask-position: center;
+}
+
+.beepboxEditor .piano-button.pressed, .beepboxEditor .drum-button.pressed {
+	filter: brightness(0.5);
+}
+
+.beepboxEditor .customize-instrument {
+	margin: 2px 0;
+}
+.beepboxEditor .customize-instrument::before {
+	content: "";
+	flex-shrink: 0;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	pointer-events: none;
+	width: var(--button-size);
+	height: var(--button-size);
+	background: currentColor;
+	-webkit-mask-image: var(--customize-dial-symbol);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-image: var(--customize-dial-symbol);
+	mask-repeat: no-repeat;
+	mask-position: center;
+}
+
+.beepboxEditor .instrumentCopyPasteRow {
+	gap: 2px;
+}
+
+.beepboxEditor .copy-instrument {
+	margin: 2px 0;
+	flex-grow: 1;
+}
+.beepboxEditor .copy-instrument::before {
+	content: "";
+	flex-shrink: 0;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	pointer-events: none;
+	width: var(--button-size);
+	height: var(--button-size);
+	background: currentColor;
+	-webkit-mask-image: var(--instrument-copy-symbol);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-image: var(--instrument-copy-symbol);
+	mask-repeat: no-repeat;
+	mask-position: center;
+}
+
+.beepboxEditor .paste-instrument {
+	margin: 2px 0;
+	flex-grow: 1;
+}
+.beepboxEditor .paste-instrument::before {
+	content: "";
+	flex-shrink: 0;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	pointer-events: none;
+	width: var(--button-size);
+	height: var(--button-size);
+	background: currentColor;
+	-webkit-mask-image: var(--instrument-paste-symbol);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-image: var(--instrument-paste-symbol);
+	mask-repeat: no-repeat;
+	mask-position: center;
+}
+
+.beepboxEditor .envelopeEditor {
+	display: flex;
+	flex-direction: column;
+}
+
+.beepboxEditor .envelope-row {
+	display: flex;
+	margin: 2px 0;
+	gap: 2px;
+}
+
+.beepboxEditor .add-envelope {
+	width: var(--button-size);
+}
+.beepboxEditor .add-envelope::before {
+	content: "";
+	position: absolute;
+	width: var(--button-size);
+	height: var(--button-size);
+	left: 0;
+	top: 0;
+	pointer-events: none;
+	background: currentColor;
+	mask-image: var(--add-symbol);
+	mask-repeat: no-repeat;
+	mask-position: center;
+	-webkit-mask-image: var(--add-symbol);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+}
+.beepboxEditor .add-envelope:disabled {
+	visibility: hidden;
+}
+
+.beepboxEditor .effects-menu {
+	width: var(--button-size);
+	position: relative;
+}
+.beepboxEditor .effects-menu::before {
+	content: "";
+	position: absolute;
+	width: var(--button-size);
+	height: var(--button-size);
+	left: 0;
+	top: 0;
+	pointer-events: none;
+	background: currentColor;
+	mask-image: var(--menu-down-symbol);
+	mask-repeat: no-repeat;
+	mask-position: center;
+	-webkit-mask-image: var(--menu-down-symbol);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+}
+
+.beepboxEditor .zoomInButton, .beepboxEditor .zoomOutButton {
+	width: var(--button-size);
+	position: absolute;
+	right: 10px;
+}
+.beepboxEditor .zoomInButton {
+	top: 10px;
+}
+.beepboxEditor .zoomOutButton {
+	top: 50px;
+}
+.beepboxEditor .zoomInButton::before {
+	content: "";
+	position: absolute;
+	width: var(--button-size);
+	height: var(--button-size);
+	left: 0;
+	top: 0;
+	pointer-events: none;
+	background: currentColor;
+	mask-image: var(--zoom-in-symbol);
+	mask-repeat: no-repeat;
+	mask-position: center;
+	-webkit-mask-image: var(--zoom-in-symbol);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+}
+.beepboxEditor .zoomOutButton::before {
+	content: "";
+	position: absolute;
+	width: var(--button-size);
+	height: var(--button-size);
+	left: 0;
+	top: 0;
+	pointer-events: none;
+	background: currentColor;
+	mask-image: var(--zoom-out-symbol);
+	mask-repeat: no-repeat;
+	mask-position: center;
+	-webkit-mask-image: var(--zoom-out-symbol);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+}
+
+.beepboxEditor .delete-envelope {
+	width: var(--button-size);
+	flex-shrink: 0;
+	flex-grow: 0;
+}
+.beepboxEditor .delete-envelope::before {
+	content: "";
+	position: absolute;
+	width: var(--button-size);
+	height: var(--button-size);
+	left: 0;
+	top: 0;
+	pointer-events: none;
+	background: currentColor;
+	mask-image: var(--close-symbol);
+	mask-repeat: no-repeat;
+	mask-position: center;
+	-webkit-mask-image: var(--close-symbol);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+}
+.beepboxEditor .delete-envelope:disabled {
+	visibility: hidden;
+}
+
+.beepboxEditor .menu.file::before {
+	content: "";
+	flex-shrink: 0;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	pointer-events: none;
+	width: var(--button-size);
+	height: var(--button-size);
+	background: currentColor;
+	-webkit-mask-image: var(--file-page-symbol);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-image: var(--file-page-symbol);
+	mask-repeat: no-repeat;
+	mask-position: center;
+}
+
+.beepboxEditor .menu.edit::before {
+	content: "";
+	flex-shrink: 0;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	pointer-events: none;
+	width: var(--button-size);
+	height: var(--button-size);
+	background: currentColor;
+	-webkit-mask-image: var(--edit-pencil-symbol);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-image: var(--edit-pencil-symbol);
+	mask-repeat: no-repeat;
+	mask-position: center;
+}
+
+.beepboxEditor .menu.preferences::before {
+	content: "";
+	flex-shrink: 0;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	pointer-events: none;
+	width: var(--button-size);
+	height: var(--button-size);
+	background: currentColor;
+	-webkit-mask-image: var(--preferences-gear-symbol);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-image: var(--preferences-gear-symbol);
+	mask-repeat: no-repeat;
+	mask-position: center;
+}
+
+.beepboxEditor .mute-button::before {
+	content: "";
+	pointer-events: none;
+	width: 100%;
+	height: 100%;
+	background: var(--primary-text);
+	display: inline-block;
+	-webkit-mask-image: var(--unmuted-symbol);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	-webkit-mask-size: contain;
+	mask-image: var(--unmuted-symbol);
+	mask-repeat: no-repeat;
+	mask-position: center;
+	mask-size: contain;
+}
+
+.beepboxEditor .mute-button.muted::before {
+	background: var(--editor-background);
+	-webkit-mask-image: var(--muted-symbol);
+	mask-image: var(--muted-symbol);
+}
+
+.beepboxEditor .promptContainer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 100;
+}
+
+.beepboxEditor .promptContainer::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: var(--editor-background);
+	opacity: 0.5;
+	display: flex;
+}
+
+.beepboxEditor .prompt {
+	margin: auto;
+	text-align: center;
+	background: var(--editor-background);
+	border-radius: 15px;
+	border: 4px solid var(--ui-widget-background);
+	color: var(--primary-text);
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	box-shadow: 5px 5px 20px 10px rgba(0,0,0,0.5);
+}
+
+.beepboxEditor .prompt > *:not(:first-child):not(.cancelButton) {
+	margin-top: 1.5em;
+}
+
+.beepboxEditor .prompt h2 {
+	font-size: 2em;
+	margin: 0 16px;
+	font-weight: normal;
+}
+
+.beepboxEditor .prompt p {
+	text-align: left;
+	margin: 1em 0;
+}
+
+.beepboxEditor .prompt label {
+	cursor: pointer;
+}
+
+.beepboxEditor .prompt.recordingSetupPrompt p {
+	margin-top: 0.75em;
+	margin-bottom: 0;
+}
+
+.beepboxEditor .prompt.recordingSetupPrompt > label:not(:first-child):not(.cancelButton) {
+	margin: 2px 0;
+}
+
+.beepboxEditor .layout-option {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	cursor: pointer;
+	color: var(--secondary-text);
+}
+
+.beepboxEditor .layout-option input {
+	display: none;
+}
+
+.beepboxEditor .layout-option input:checked ~ * {
+	color: var(--primary-text);
+}
+
+.beepboxEditor .selectContainer {
+	position: relative;
+}
+.beepboxEditor .selectContainer:not(.menu)::after {
+	content: "";
+	flex-shrink: 0;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	pointer-events: none;
+	width: 14px;
+	height: var(--button-size);
+	background: currentColor;
+	-webkit-mask-image: var(--select-arrows-symbol);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-image: var(--select-arrows-symbol);
+	mask-repeat: no-repeat;
+	mask-position: center;
+}
+.beepboxEditor .selectContainer.menu::after {
+	content: "";
+	flex-shrink: 0;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	pointer-events: none;
+	width: var(--button-size);
+	height: var(--button-size);
+	background: currentColor;
+	-webkit-mask-image: var(--menu-down-symbol);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-image: var(--menu-down-symbol);
+	mask-repeat: no-repeat;
+	mask-position: center;
+}
+.beepboxEditor select {
+	margin: 0;
+	padding: 0 4px;
+	display: block;
+	height: var(--button-size);
+	border: none;
+	border-radius: 5px;
+	background: var(--ui-widget-background);
+	color: inherit;
+	font-size: inherit;
+	cursor: pointer;
+	font-family: inherit;
+	font-weight: inherit;
+
+	-webkit-appearance:none;
+	-moz-appearance: none;
+	appearance: none;
+}
+.beepboxEditor .menu select {
+	padding: 0 var(--button-size);
+}
+.beepboxEditor select:focus {
+	background: var(--ui-widget-focus);
+	outline: none;
+}
+.beepboxEditor .menu select {
+	text-align: center;
+	text-align-last: center;
+}
+.beepboxEditor .settings-area select {
+       width: 100%;
+}
+
+/* This makes it look better in firefox on my computer... What about others?
+@-moz-document url-prefix() {
+	.beepboxEditor select { padding: 0 2px; }
+}
+*/
+.beepboxEditor button {
+	margin: 0;
+	position: relative;
+	height: var(--button-size);
+	border: none;
+	border-radius: 5px;
+	background: var(--ui-widget-background);
+	color: inherit;
+	font-size: inherit;
+	font-family: inherit;
+	font-weight: inherit;
+	cursor: pointer;
+}
+.beepboxEditor button:focus {
+	background: var(--ui-widget-focus);
+	outline: none;
+}
+
+.beepboxEditor button.cancelButton {
+	float: right;
+	width: var(--button-size);
+	position: absolute;
+	top: 8px;
+	right: 8px;
+}
+
+.beepboxEditor .playback-bar-controls {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+	grid-template-rows: min-content;
+	grid-column-gap: 4px;
+}
+
+.beepboxEditor button.playButton::before {
+	content: "";
+	flex-shrink: 0;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	pointer-events: none;
+	width: var(--button-size);
+	height: var(--button-size);
+	background: currentColor;
+	-webkit-mask-image: var(--play-symbol);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-image: var(--play-symbol);
+	mask-repeat: no-repeat;
+	mask-position: center;
+}
+.beepboxEditor button.pauseButton::before {
+	content: "";
+	flex-shrink: 0;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	pointer-events: none;
+	width: var(--button-size);
+	height: var(--button-size);
+	background: currentColor;
+	-webkit-mask-image: var(--pause-symbol);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-image: var(--pause-symbol);
+	mask-repeat: no-repeat;
+	mask-position: center;
+}
+.beepboxEditor button.recordButton::before {
+	content: "";
+	flex-shrink: 0;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	pointer-events: none;
+	width: var(--button-size);
+	height: var(--button-size);
+	background: currentColor;
+	-webkit-mask-image: var(--record-symbol);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-image: var(--record-symbol);
+	mask-repeat: no-repeat;
+	mask-position: center;
+}
+.beepboxEditor button.stopButton::before {
+	content: "";
+	flex-shrink: 0;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	pointer-events: none;
+	width: var(--button-size);
+	height: var(--button-size);
+	background: currentColor;
+	-webkit-mask-image: var(--stop-symbol);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-image: var(--stop-symbol);
+	mask-repeat: no-repeat;
+	mask-position: center;
+}
+
+.beepboxEditor button.prevBarButton::before {
+	content: "";
+	flex-shrink: 0;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	width: var(--button-size);
+	height: var(--button-size);
+	background: currentColor;
+	-webkit-mask-image: var(--prev-bar-symbol);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-image: var(--prev-bar-symbol);
+	mask-repeat: no-repeat;
+	mask-position: center;
+}
+
+.beepboxEditor button.nextBarButton::before {
+	content: "";
+	flex-shrink: 0;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	pointer-events: none;
+	width: var(--button-size);
+	height: var(--button-size);
+	background: currentColor;
+	-webkit-mask-image: var(--next-bar-symbol);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-image: var(--next-bar-symbol);
+	mask-repeat: no-repeat;
+	mask-position: center;
+}
+
+.beepboxEditor button.playButton, .beepboxEditor button.pauseButton, .beepboxEditor button.recordButton, .beepboxEditor button.stopButton, .beepboxEditor button.okayButton, .beepboxEditor button.exportButton {
+	padding-left: var(--button-size);
+}
+.beepboxEditor button.playButton, .beepboxEditor button.pauseButton, .beepboxEditor button.recordButton {
+	grid-column-start: 1;
+	grid-column-end: 3;
+}
+.beepboxEditor button.stopButton {
+	grid-column-start: 1;
+	grid-column-end: 5;
+}
+.beepboxEditor button.prevBarButton {
+	grid-column-start: 3;
+	grid-column-end: 4;
+}
+.beepboxEditor button.nextBarButton {
+	grid-column-start: 4;
+	grid-column-end: 5;
+}
+
+.beepboxEditor button.playButton.shrunk, .beepboxEditor button.recordButton.shrunk {
+	padding: 0;
+}
+.beepboxEditor button.playButton.shrunk::before, .beepboxEditor button.recordButton.shrunk::before {
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.beepboxEditor button.playButton.shrunk span, .beepboxEditor button.recordButton.shrunk span {
+	display: none;
+}
+.beepboxEditor button.playButton.shrunk {
+	grid-column-start: 1;
+	grid-column-end: 2;
+}
+.beepboxEditor button.recordButton.shrunk {
+	grid-column-start: 2;
+	grid-column-end: 3;
+}
+
+.beepboxEditor button.cancelButton::before {
+	content: "";
+	position: absolute;
+	width: var(--button-size);
+	height: var(--button-size);
+	left: 0;
+	top: 0;
+	pointer-events: none;
+	background: currentColor;
+	mask-image: var(--close-symbol);
+	mask-repeat: no-repeat;
+	mask-position: center;
+	-webkit-mask-image: var(--close-symbol);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+}
+
+.beepboxEditor button.okayButton::before {
+	content: "";
+	position: absolute;
+	width: var(--button-size);
+	height: var(--button-size);
+	left: 0;
+	top: 0;
+	pointer-events: none;
+	background: currentColor;
+	-webkit-mask-image: var(--checkmark-symbol);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-image: var(--checkmark-symbol);
+	mask-repeat: no-repeat;
+	mask-position: center;
+}
+
+.beepboxEditor button.exportButton::before {
+	content: "";
+	position: absolute;
+	width: var(--button-size);
+	height: var(--button-size);
+	left: 0;
+	top: 0;
+	pointer-events: none;
+	background: currentColor;
+	mask-image: var(--export-symbol);
+	mask-repeat: no-repeat;
+	mask-position: center;
+	-webkit-mask-image: var(--export-symbol);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+}
+
+.beepboxEditor .instrument-bar {
+	display: flex;
+	gap: 2px;
+}
+
+.beepboxEditor .instrument-bar button {
+	flex-grow: 1;
+	min-width: 0;
+	padding: 0;
+	flex-basis: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--text-color-lit);
+}
+
+.beepboxEditor .instrument-bar .remove-instrument, .beepboxEditor .instrument-bar .add-instrument {
+	max-width: var(--button-size);
+}
+
+.beepboxEditor .instrument-bar > :not(:first-child) {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+
+.beepboxEditor .instrument-bar > :not(.last-button) {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.beepboxEditor .instrument-bar .selected-instrument {
+	background: var(--background-color-lit);
+	color: var(--inverted-text);
+}
+
+.beepboxEditor .instrument-bar .deactivated {
+	background: var(--editor-background);
+	color: var(--text-color-dim);
+}
+
+.beepboxEditor .instrument-bar .deactivated.selected-instrument {
+	background: var(--background-color-dim);
+	color: var(--inverted-text);
+}
+
+.beepboxEditor .instrument-bar .remove-instrument::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: var(--button-size);
+	left: 0;
+	top: 0;
+	pointer-events: none;
+	background: currentColor;
+	mask-image: var(--close-symbol);
+	mask-repeat: no-repeat;
+	mask-position: center;
+	-webkit-mask-image: var(--close-symbol);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+}
+
+.beepboxEditor .instrument-bar .add-instrument::before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: var(--button-size);
+	left: 0;
+	top: 0;
+	pointer-events: none;
+	background: currentColor;
+	mask-image: var(--add-symbol);
+	mask-repeat: no-repeat;
+	mask-position: center;
+	-webkit-mask-image: var(--add-symbol);
+	-webkit-mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+}
+
+.beepboxEditor canvas {
+	overflow: hidden;
+	position: absolute;
+	display: block;
+}
+
+.beepboxEditor .trackContainer {
+	flex-grow: 1;
+}
+
+.beepboxEditor .trackAndMuteContainer {
+	display: flex;
+	align-items: flex-start;
+	width: 100%;
+	min-height: 0;
+	flex: 1;
+	overflow-x: hidden;
+	position: relative;
+}
+
+.beepboxEditor .channelRow {
+	display: flex;
+}
+
+.beepboxEditor .channelBox {
+	display: flex;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	padding-top: 1px;
+}
+
+.beepboxEditor .channelBoxLabel {
+	font-size: 20px;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+
+.beepboxEditor .muteEditor {
+	width: 32px;
+	flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	position: sticky;
+	left: 0;
+	z-index: 1;
+	background: var(--editor-background);
+}
+
+.beepboxEditor .selectRow, .beepboxEditor .instrumentCopyPasteRow {
+	margin: 2px 0;
+	height: var(--button-size);
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.beepboxEditor .selectRow > :last-child {
+	width: 62.5%;
+	flex-shrink: 0;
+}
+
+.beepboxEditor .menu-area {
+	display: flex;
+	flex-direction: column;
+}
+.beepboxEditor .menu-area > * {
+	margin: 2px 0;
+}
+.beepboxEditor .menu-area > button {
+	padding: 0 var(--button-size);
+	white-space: nowrap;
+}
+
+.beepboxEditor .song-settings-area {
+	display: flex;
+	flex-direction: column;
+}
+
+.beepboxEditor .editor-controls {
+	flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
+}
+
+.beepboxEditor .instrument-settings-area {
+	display: flex;
+	flex-direction: column;
+}
+
+.beepboxEditor .editor-right-side-top > *, .beepboxEditor .editor-right-side-bottom > * {
+	flex-shrink: 0;
+}
+
+.beepboxEditor .pitchShiftMarkerContainer {
+	box-sizing: border-box;
+	display: flex;
+	height: 100%;
+	left: 3px;
+	right: 3px;
+	position: absolute;
+	align-items: center;
+	pointer-events: none;
+}
+
+.beepboxEditor .pitchShiftMarker {
+	width: 0;
+	height: 0;
+	position: absolute;
+}
+
+.beepboxEditor .pitchShiftMarker::before {
+	content: "";
+	width: 2px;
+	height: 20px;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	background: currentColor;
+	border-radius: 3px;
+}
+
+.beepboxEditor input[type=text], .beepboxEditor input[type=number] {
+	font-size: inherit;
+	font-weight: inherit;
+	font-family: inherit;
+	background: transparent;
+	border: 1px solid var(--ui-widget-focus);
+	color: var(--primary-text);
+}
+
+.beepboxEditor input[type=text]::selection, .beepboxEditor input[type=number]::selection {
+	background-color: var(--text-selection);
+	color: var(--primary-text);
+}
+
+.beepboxEditor input[type=checkbox] {
+  transform: scale(1.5);
+}
+
+.beepboxEditor input[type=range] {
+	-webkit-appearance: none;
+	color: inherit;
+	width: 100%;
+	height: var(--button-size);
+	font-size: inherit;
+	margin: 0;
+	cursor: pointer;
+	background: none;
+	touch-action: pan-y;
+}
+.beepboxEditor input[type=range]:focus {
+	outline: none;
+}
+.beepboxEditor input[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 6px;
+	cursor: pointer;
+	background: var(--ui-widget-background);
+}
+.beepboxEditor input[type=range]::-webkit-slider-thumb {
+	height: var(--button-size);
+	width: 6px;
+	border-radius: 3px;
+	background: currentColor;
+	cursor: pointer;
+	-webkit-appearance: none;
+	margin-top: -10px;
+}
+.beepboxEditor input[type=range]:focus::-webkit-slider-runnable-track {
+	background: var(--ui-widget-focus);
+}
+.beepboxEditor input[type=range]::-moz-range-track {
+	width: 100%;
+	height: 6px;
+	cursor: pointer;
+	background: var(--ui-widget-background);
+}
+.beepboxEditor input[type=range]:focus::-moz-range-track {
+	background: var(--ui-widget-focus);
+}
+.beepboxEditor input[type=range]::-moz-range-thumb {
+	height: var(--button-size);
+	width: 6px;
+	border-radius: 3px;
+	border: none;
+	background: currentColor;
+	cursor: pointer;
+}
+.beepboxEditor input[type=range]::-ms-track {
+	width: 100%;
+	height: 6px;
+	cursor: pointer;
+	background: var(--ui-widget-background);
+	border-color: transparent;
+}
+.beepboxEditor input[type=range]:focus::-ms-track {
+	background: var(--ui-widget-focus);
+}
+.beepboxEditor input[type=range]::-ms-thumb {
+	height: var(--button-size);
+	width: 6px;
+	border-radius: 3px;
+	background: currentColor;
+	cursor: pointer;
+}
+
+/* wide screen */
+@media (min-width: 711px) {
+	#beepboxEditorContainer {
+		display: table;
+	}
+	.beepboxEditor {
+		flex-direction: row;
+	}
+	.beepboxEditor:focus-within {
+		outline: 3px solid var(--ui-widget-background);
+	}
+	.beepboxEditor .trackAndMuteContainer {
+		width: 512px;
+	}
+	.beepboxEditor .play-pause-area {
+		display: flex;
+		flex-direction: column;
+	}
+	.beepboxEditor .playback-bar-controls {
+		margin: 2px 0;
+	}
+	.beepboxEditor .playback-volume-controls {
+		display: flex;
+		flex-direction: row;
+		margin: 2px 0;
+		align-items: center;
+	}
+	.beepboxEditor .settings-area {
+		width: var(--settings-area-width);
+	}
+}
+
+/* narrow screen */
+@media (max-width: 710px) {
+	.beepboxEditor {
+		grid-template-columns: minmax(0, 1fr);
+		grid-template-rows: min-content 6px min-content min-content;
+		grid-template-areas: "pattern-area" "." "track-area" "settings-area";
+		grid-row-gap: 0;
+	}
+	.beepboxEditor .settings-area {
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+		grid-template-rows: min-content min-content 1fr min-content;
+		grid-template-areas:
+			"play-pause-area play-pause-area"
+			"menu-area instrument-settings-area"
+			"song-settings-area instrument-settings-area"
+			"version-area version-area";
+		grid-column-gap: 8px;
+		margin: 0 4px;
+	}
+	.beepboxEditor:focus-within {
+		outline: none;
+	}
+	.beepboxEditor .pattern-area {
+		max-height: 75vh;
+	}
+	.beepboxEditor .trackAndMuteContainer {
+		overflow-x: auto;
+	}
+	.beepboxEditor .barScrollBar {
+		display: none;
+	}
+	.beepboxEditor .play-pause-area {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+		grid-column-gap: 8px;
+		margin: 2px 0;
+	}
+	.beepboxEditor .playback-bar-controls {
+		flex-grow: 1;
+	}
+	.beepboxEditor .playback-volume-controls {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		flex-grow: 1;
+	}
+}
+
+</style><style type="text/css"></style></head>
+
+<body>
+	<div id="beepboxEditorContainer">
+		<noscript>
+			Sorry, BeepBox requires a JavaScript-enabled browser.
+		</noscript>
+	<div class="beepboxEditor" tabindex="0"><div class="pattern-area"><div style="width: 32px; height: 100%; overflow: hidden; position: relative; flex-shrink: 0; touch-action: none; display: none;"><div style="width: 100%; height: 100%; display: flex; flex-direction: column-reverse; align-items: stretch;"></div><div style="width: 100%; height: 100%; display: flex; flex-direction: column-reverse; align-items: stretch;"><div class="drum-button" style="background-size: 100% 100%;"></div><div class="drum-button" style="background-size: 97.08333333333333% 97.08333333333333%;"></div><div class="drum-button" style="background-size: 94.16666666666667% 94.16666666666667%;"></div><div class="drum-button" style="background-size: 91.25% 91.25%;"></div><div class="drum-button" style="background-size: 88.33333333333333% 88.33333333333333%;"></div><div class="drum-button" style="background-size: 85.41666666666666% 85.41666666666666%;"></div><div class="drum-button" style="background-size: 82.5% 82.5%;"></div><div class="drum-button" style="background-size: 79.58333333333334% 79.58333333333334%;"></div><div class="drum-button" style="background-size: 76.66666666666667% 76.66666666666667%;"></div><div class="drum-button" style="background-size: 73.75% 73.75%;"></div><div class="drum-button" style="background-size: 70.83333333333333% 70.83333333333333%;"></div><div class="drum-button" style="background-size: 67.91666666666667% 67.91666666666667%;"></div></div><div style="width: 100%; height: 40px; border: 2px solid var(--primary-text); position: absolute; box-sizing: border-box; pointer-events: none; visibility: hidden;"></div></div><div style="flex: 1; height: 100%; display: flex; overflow: hidden; justify-content: center;"><div style="height: 100%; overflow: hidden; position: relative; flex-grow: 1; display: none;"><svg style="background-color: var(--editor-background); touch-action: none; position: absolute;" width="100%" height="100%"><defs><pattern id="patternEditorNoteBackground-1" x="0" y="0" patternUnits="userSpaceOnUse"><rect x="1" fill="var(--tonic)"></rect><rect x="1" fill="var(--pitch-background)"></rect><rect x="1" fill="var(--pitch-background)"></rect><rect x="1" fill="var(--pitch-background)"></rect><rect x="1" fill="var(--pitch-background)"></rect><rect x="1" fill="var(--pitch-background)"></rect><rect x="1" fill="var(--pitch-background)"></rect><rect x="1" fill="var(--pitch-background)"></rect><rect x="1" fill="var(--pitch-background)"></rect><rect x="1" fill="var(--pitch-background)"></rect><rect x="1" fill="var(--pitch-background)"></rect><rect x="1" fill="var(--pitch-background)"></rect></pattern><pattern id="patternEditorDrumBackground-1" x="0" y="0" patternUnits="userSpaceOnUse"><rect x="1" y="1" fill="var(--pitch-background)"></rect></pattern></defs><rect x="0" y="0" pointer-events="none" fill="url(#patternEditorNoteBackground-1)"></rect><rect fill="var(--box-selection-fill)" stroke="var(--hover-preview)" stroke-width="2" stroke-dasharray="5, 3" pointer-events="none" visibility="hidden"></rect><svg></svg><path fill="none" stroke="var(--hover-preview)" stroke-width="2" pointer-events="none"></path><rect x="0" y="0" width="4" fill="var(--playhead)" pointer-events="none" style="display: none;"></rect><rect x="0" y="0" width="10000" height="10000" fill="var(--editor-background)" style="opacity: 0.5;"></rect></svg></div><div style="height: 100%; overflow:hidden; position: relative; flex-grow: 1;"><svg style="background-color: var(--editor-background); touch-action: none; position: absolute;" width="100%" height="100%"><defs><pattern id="patternEditorNoteBackground0" x="0" y="0" patternUnits="userSpaceOnUse" width="64" height="156"><rect x="1" fill="var(--tonic)" width="62" y="1" height="11" style="visibility: visible;"></rect><rect x="1" fill="var(--pitch-background)" width="62" y="144" height="11" style="visibility: hidden;"></rect><rect x="1" fill="var(--pitch-background)" width="62" y="131" height="11" style="visibility: visible;"></rect><rect x="1" fill="var(--pitch-background)" width="62" y="118" height="11" style="visibility: hidden;"></rect><rect x="1" fill="var(--pitch-background)" width="62" y="105" height="11" style="visibility: visible;"></rect><rect x="1" fill="var(--pitch-background)" width="62" y="92" height="11" style="visibility: visible;"></rect><rect x="1" fill="var(--pitch-background)" width="62" y="79" height="11" style="visibility: hidden;"></rect><rect x="1" fill="var(--pitch-background)" width="62" y="66" height="11" style="visibility: visible;"></rect><rect x="1" fill="var(--pitch-background)" width="62" y="53" height="11" style="visibility: hidden;"></rect><rect x="1" fill="var(--pitch-background)" width="62" y="40" height="11" style="visibility: visible;"></rect><rect x="1" fill="var(--pitch-background)" width="62" y="27" height="11" style="visibility: hidden;"></rect><rect x="1" fill="var(--pitch-background)" width="62" y="14" height="11" style="visibility: visible;"></rect></pattern><pattern id="patternEditorDrumBackground0" x="0" y="0" patternUnits="userSpaceOnUse" width="64" height="13"><rect x="1" y="1" fill="var(--pitch-background)" width="62" height="11"></rect></pattern></defs><rect x="0" y="0" pointer-events="none" fill="url(#patternEditorNoteBackground0)" width="512" height="481"></rect><rect fill="var(--box-selection-fill)" stroke="var(--hover-preview)" stroke-width="2" stroke-dasharray="5, 3" pointer-events="none" visibility="hidden" y="0" height="481"></rect><svg><path fill="var(--pitch3-secondary-note)" pointer-events="none" d="M 1 209 L 1 194 L 127 194 L 127 209 L 1 209 z"></path><path fill="var(--pitch3-primary-note)" pointer-events="none" d="M 1 209 L 1 194 L 127 194 L 127 209 L 1 209 z"></path><path fill="var(--pitch3-secondary-note)" pointer-events="none" d="M 129 183 L 129 168 L 255 168 L 255 183 L 129 183 z"></path><path fill="var(--pitch3-primary-note)" pointer-events="none" d="M 129 183 L 129 168 L 255 168 L 255 183 L 129 183 z"></path><path fill="var(--pitch3-secondary-note)" pointer-events="none" d="M 257 170 L 257 155 L 383 155 L 383 170 L 257 170 z"></path><path fill="var(--pitch3-primary-note)" pointer-events="none" d="M 257 170 L 257 155 L 383 155 L 383 170 L 257 170 z"></path><path fill="var(--pitch3-secondary-note)" pointer-events="none" d="M 385 -12 L 385 -27 L 511 -27 L 511 -12 L 385 -12 z"></path><path fill="var(--pitch3-primary-note)" pointer-events="none" d="M 385 -12 L 385 -27 L 511 -27 L 511 -12 L 385 -12 z"></path><path fill="var(--pitch3-secondary-note)" pointer-events="none" d="M 385 144 L 385 129 L 511 129 L 511 144 L 385 144 z"></path><path fill="var(--pitch3-primary-note)" pointer-events="none" d="M 385 144 L 385 129 L 511 129 L 511 144 L 385 144 z"></path></svg><path fill="none" stroke="var(--hover-preview)" stroke-width="2" pointer-events="none" visibility="visible" d="M 129 365 L 129 350 L 255 350 L 255 365 L 129 365 z"></path><rect x="56.1" y="0" width="4" fill="var(--playhead)" pointer-events="none" height="481" visibility="hidden"></rect></svg></div><div style="height: 100%; overflow: hidden; position: relative; flex-grow: 1; display: none;"><svg style="background-color: var(--editor-background); touch-action: none; position: absolute;" width="100%" height="100%"><defs><pattern id="patternEditorNoteBackground1" x="0" y="0" patternUnits="userSpaceOnUse"><rect x="1" fill="var(--tonic)"></rect><rect x="1" fill="var(--pitch-background)"></rect><rect x="1" fill="var(--pitch-background)"></rect><rect x="1" fill="var(--pitch-background)"></rect><rect x="1" fill="var(--pitch-background)"></rect><rect x="1" fill="var(--pitch-background)"></rect><rect x="1" fill="var(--pitch-background)"></rect><rect x="1" fill="var(--pitch-background)"></rect><rect x="1" fill="var(--pitch-background)"></rect><rect x="1" fill="var(--pitch-background)"></rect><rect x="1" fill="var(--pitch-background)"></rect><rect x="1" fill="var(--pitch-background)"></rect></pattern><pattern id="patternEditorDrumBackground1" x="0" y="0" patternUnits="userSpaceOnUse"><rect x="1" y="1" fill="var(--pitch-background)"></rect></pattern></defs><rect x="0" y="0" pointer-events="none" fill="url(#patternEditorNoteBackground1)"></rect><rect fill="var(--box-selection-fill)" stroke="var(--hover-preview)" stroke-width="2" stroke-dasharray="5, 3" pointer-events="none" visibility="hidden"></rect><svg></svg><path fill="none" stroke="var(--hover-preview)" stroke-width="2" pointer-events="none"></path><rect x="0" y="0" width="4" fill="var(--playhead)" pointer-events="none" style="display: none;"></rect><rect x="0" y="0" width="10000" height="10000" fill="var(--editor-background)" style="opacity: 0.5;"></rect></svg></div></div><div id="octaveScrollBarContainer" style="width: 20px; height: 100%; overflow: hidden; position: relative; flex-shrink: 0; display: none;"><svg style="background-color: var(--editor-background); touch-action: pan-x; position: absolute; visibility: visible;" width="20" height="100%" viewBox="0 0 20 481" preserveAspectRatio="none"><rect fill="var(--ui-widget-background)" x="2" y="136.2857142857143" width="16" height="208.42857142857142"></rect><rect fill="var(--tonic)" x="0" y="0" width="20" height="4"></rect><rect fill="var(--tonic)" x="0" y="68.14285714285714" width="20" height="4"></rect><rect fill="var(--tonic)" x="0" y="136.28571428571428" width="20" height="4"></rect><rect fill="var(--tonic)" x="0" y="204.42857142857142" width="20" height="4"></rect><rect fill="var(--tonic)" x="0" y="272.57142857142856" width="20" height="4"></rect><rect fill="var(--tonic)" x="0" y="340.71428571428567" width="20" height="4"></rect><rect fill="var(--tonic)" x="0" y="408.85714285714283" width="20" height="4"></rect><rect fill="var(--tonic)" x="0" y="477" width="20" height="4"></rect><rect fill="none" stroke="var(--hover-preview)" stroke-width="2" pointer-events="none" x="1" y="136.2857142857143" width="18" height="208.42857142857142" style="visibility: hidden;"></rect><path fill="var(--hover-preview)" pointer-events="none" d="M 10 9 L 16 20 L 4 20 z" style="visibility: hidden;"></path><path fill="var(--hover-preview)" pointer-events="none" d="M 10 472 L 16 461 L 4 461 z" style="visibility: hidden;"></path></svg></div><button class="zoomInButton" type="button" title="Zoom In" style="display: none;"></button><button class="zoomOutButton" type="button" title="Zoom Out" style="display: none;"></button></div><div class="track-area"><div class="trackAndMuteContainer"><div class="muteEditor" style="display: none;"></div><div class="trackContainer"><div class="noSelection" style="position: relative; overflow: hidden; width: 512px; height: 224px;"><div style="display: flex; flex-direction: column; width: 512px;"><div class="channelRow"><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch1-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch1-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch1-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch1-primary-channel);">1</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch1-secondary-channel);">2</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch1-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch1-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch1-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch1-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch1-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch1-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch1-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch1-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch1-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch1-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch1-secondary-channel);">0</div></div></div><div class="channelRow"><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch2-primary-channel);">1</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch2-primary-channel);">1</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch2-primary-channel);">1</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch2-primary-channel);">2</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch2-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch2-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch2-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch2-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch2-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch2-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch2-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch2-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch2-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch2-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch2-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch2-secondary-channel);">0</div></div></div><div class="channelRow"><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch3-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch3-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch3-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch3-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--pitch3-primary-channel); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--inverted-text);">1</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch3-primary-channel);">2</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch3-primary-channel);">1</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch3-primary-channel);">2</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch3-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch3-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch3-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch3-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch3-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch3-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch3-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch3-secondary-channel);">0</div></div></div><div class="channelRow"><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch4-primary-channel);">1</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch4-primary-channel);">1</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch4-primary-channel);">1</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch4-primary-channel);">1</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch4-primary-channel);">2</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch4-primary-channel);">2</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch4-primary-channel);">2</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch4-primary-channel);">2</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch4-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch4-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch4-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch4-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch4-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch4-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch4-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch4-secondary-channel);">0</div></div></div><div class="channelRow"><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch5-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch5-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch5-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch5-primary-channel);">3</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch5-primary-channel);">1</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch5-primary-channel);">2</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch5-primary-channel);">1</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch5-primary-channel);">2</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch5-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch5-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch5-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch5-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch5-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch5-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch5-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch5-secondary-channel);">0</div></div></div><div class="channelRow"><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch6-primary-channel);">1</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch6-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch6-primary-channel);">2</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch6-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch6-primary-channel);">1</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch6-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch6-primary-channel);">2</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch6-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch6-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch6-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch6-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch6-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch6-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch6-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch6-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--pitch6-secondary-channel);">0</div></div></div><div class="channelRow"><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise1-primary-channel);">1</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise1-primary-channel);">1</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise1-primary-channel);">1</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise1-primary-channel);">2</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise1-primary-channel);">1</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise1-primary-channel);">1</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise1-primary-channel);">1</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise1-primary-channel);">1</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise1-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise1-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise1-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise1-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise1-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise1-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise1-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise1-secondary-channel);">0</div></div></div><div class="channelRow"><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise2-primary-channel);">1</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise2-primary-channel);">1</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise2-primary-channel);">1</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise2-primary-channel);">1</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise2-primary-channel);">1</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise2-primary-channel);">1</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise2-primary-channel);">1</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: var(--ui-widget-background); width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise2-primary-channel);">1</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise2-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise2-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise2-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise2-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise2-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise2-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise2-secondary-channel);">0</div></div><div class="channelBox" style="margin: 1px; height: 26px; background: none; width: 30px; visibility: visible;"><div class="channelBoxLabel" style="color: var(--noise2-secondary-channel);">0</div></div></div></div><svg style="position: absolute; top: 0;" width="512" height="224"><rect fill="var(--box-selection-fill)" stroke="var(--hover-preview)" stroke-width="2" stroke-dasharray="5, 3" pointer-events="none" visibility="hidden" x="97" y="29" width="62" height="26"></rect><rect fill="none" stroke="var(--hover-preview)" stroke-width="2" pointer-events="none" x="353" y="1" width="30" height="26" style="visibility: hidden;"></rect><path fill="var(--inverted-text)" stroke="var(--inverted-text)" stroke-width="1" pointer-events="none" style="visibility: hidden;" d="M 153.6 58.8 L 158.5 67.2 L 148.7 67.2 z"></path><path fill="var(--hover-preview)" stroke="var(--inverted-text)" stroke-width="1" pointer-events="none" style="visibility: hidden;" d="M 153.6 81.2 L 158.5 72.8 L 148.7 72.8 z"></path><rect fill="var(--playhead)" x="126" y="0" width="4" height="224"></rect></svg><select class="trackSelectBox" style="background: none; border: none; appearance: none; border-radius: initial; box-shadow: none; color: transparent; position: absolute; touch-action: none; display: none; left: 128px; width: 32px; top: 56px; height: 28px;"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option></select></div><div class="loopEditor" style="width: 512px;"><svg style="touch-action: pan-y; position: absolute;" height="20" width="512"><path fill="none" stroke="var(--loop-accent)" stroke-width="4" d="M 10 2 L 246 2 A 8 8 0 0 1 246 18 L 10 18 A 8 8 0 0 1 10 2 z"></path><path fill="var(--hover-preview)" pointer-events="none" style="visibility: hidden;" d="M 246 4 L 246 4 A 6 6 0 0 1 246 16 L 246 16 A 6 6 0 0 1 246 4 z"></path></svg></div></div><div style="position: absolute; width: 100%; height: 100%; pointer-events: none;"></div></div><div class="barScrollBar" style="width: 512px; height: 20px; overflow: hidden; position: relative; display: none;"><svg style="background-color: var(--editor-background); touch-action: pan-y; position: absolute;" width="512" height="20"><svg pointer-events="none"><rect fill="var(--ui-widget-background)" x="-1" y="0" width="2" height="20"></rect><rect fill="var(--ui-widget-background)" x="30.9375" y="6.666666666666667" width="2" height="6.666666666666666"></rect><rect fill="var(--ui-widget-background)" x="62.875" y="6.666666666666667" width="2" height="6.666666666666666"></rect><rect fill="var(--ui-widget-background)" x="94.8125" y="6.666666666666667" width="2" height="6.666666666666666"></rect><rect fill="var(--ui-widget-background)" x="126.75" y="2.5" width="2" height="15"></rect><rect fill="var(--ui-widget-background)" x="158.6875" y="6.666666666666667" width="2" height="6.666666666666666"></rect><rect fill="var(--ui-widget-background)" x="190.625" y="6.666666666666667" width="2" height="6.666666666666666"></rect><rect fill="var(--ui-widget-background)" x="222.5625" y="6.666666666666667" width="2" height="6.666666666666666"></rect><rect fill="var(--ui-widget-background)" x="254.5" y="2.5" width="2" height="15"></rect><rect fill="var(--ui-widget-background)" x="286.4375" y="6.666666666666667" width="2" height="6.666666666666666"></rect><rect fill="var(--ui-widget-background)" x="318.375" y="6.666666666666667" width="2" height="6.666666666666666"></rect><rect fill="var(--ui-widget-background)" x="350.3125" y="6.666666666666667" width="2" height="6.666666666666666"></rect><rect fill="var(--ui-widget-background)" x="382.25" y="2.5" width="2" height="15"></rect><rect fill="var(--ui-widget-background)" x="414.1875" y="6.666666666666667" width="2" height="6.666666666666666"></rect><rect fill="var(--ui-widget-background)" x="446.125" y="6.666666666666667" width="2" height="6.666666666666666"></rect><rect fill="var(--ui-widget-background)" x="478.0625" y="6.666666666666667" width="2" height="6.666666666666666"></rect><rect fill="var(--ui-widget-background)" x="510" y="0" width="2" height="20"></rect></svg><rect fill="var(--ui-widget-background)" x="0" y="2" width="511" height="16"></rect><rect fill="none" stroke="var(--hover-preview)" stroke-width="2" pointer-events="none" x="0" y="1" width="511" height="18" style="visibility: hidden;"></rect><path fill="var(--hover-preview)" pointer-events="none" d="M 9 10 L 20 16 L 20 4 z" style="visibility: hidden;"></path><path fill="var(--hover-preview)" pointer-events="none" d="M 503 10 L 492 16 L 492 4 z" style="visibility: hidden;"></path></svg></div></div><div class="settings-area noSelection"><div class="version-area"><div style="text-align: center; margin: 3px 0; color: var(--secondary-text);">BeepBox <a class="tip" target="_blank" href="https://github.com/johnnesky/beepbox/releases/tag/v4.2">4.2</a></div></div><div class="play-pause-area"><div class="playback-bar-controls"><button class="playButton" type="button" title="Play (Space)" style=""><span>Play</span></button><button class="pauseButton" style="display: none;" type="button" title="Pause (Space)">Pause</button><button class="recordButton" style="display: none;" type="button" title="Record (Ctrl+Space)"><span>Record</span></button><button class="stopButton" style="display: none;" type="button" title="Stop Recording (Space)">Stop Recording</button><button class="prevBarButton" type="button" title="Previous Bar (left bracket)"></button><button class="nextBarButton" type="button" title="Next Bar (right bracket)"></button></div><div class="playback-volume-controls"><span class="volume-speaker"></span><input title="main volume" style="width: 5em; flex-grow: 1; margin: 0;" type="range" min="0" max="75" value="50" step="1"></div></div><div class="menu-area"><div class="selectContainer menu file"><select style="width: 100%;"><option selected="" disabled="">File</option><option value="new">+ New Blank Song</option><option value="import">↑ Import Song... (Ctrl+O)</option><option value="export">↓ Export Song... (Ctrl+S)</option><option value="copyUrl">⎘ Copy Song URL</option><option value="shareUrl">⤳ Share Song URL</option><option value="shortenUrl">… Shorten Song URL</option><option value="viewPlayer">▶ View in Song Player</option><option value="copyEmbed">⎘ Copy HTML Embed Code</option><option value="songRecovery">⚠ Recover Recent Song...</option></select></div><div class="selectContainer menu edit"><select style="width: 100%;"><option selected="" disabled="">Edit</option><option value="undo">Undo (Z)</option><option value="redo">Redo (Y)</option><option value="copy">Copy Pattern (C)</option><option value="pasteNotes">Paste Pattern Notes (V)</option><option value="pasteNumbers">Paste Pattern Numbers (Ctrl+⇧V)</option><option value="insertBars">Insert Bar (⏎)</option><option value="deleteBars">Delete Selected Bars (⌫)</option><option value="insertChannel">Insert Channel (Ctrl+⏎)</option><option value="deleteChannel">Delete Selected Channels (Ctrl+⌫)</option><option value="selectAll">Select All (A)</option><option value="selectChannel">Select Channel (⇧A)</option><option value="duplicatePatterns">Duplicate Reused Patterns (D)</option><option value="transposeUp">Move Notes Up (+ or ⇧+)</option><option value="transposeDown">Move Notes Down (- or ⇧-)</option><option value="moveNotesSideways">Move All Notes Sideways...</option><option value="beatsPerBar">Change Beats Per Bar...</option><option value="barCount">Change Song Length...</option><option value="channelSettings">Channel Settings... (Q)</option></select></div><div class="selectContainer menu preferences"><select style="width: 100%;"><option selected="" disabled="">Preferences</option><option value="autoPlay">　Auto Play on Load</option><option value="autoFollow">✓ Show And Play The Same Bar</option><option value="enableNotePreview">✓ Hear Preview of Added Notes</option><option value="showLetters">　Show Piano Keys</option><option value="showFifth">　Highlight "Fifth" of Song Key</option><option value="notesOutsideScale">　Allow Adding Notes Not in Scale</option><option value="setDefaultScale">　Use Current Scale as Default</option><option value="showChannels">　Show Notes From All Channels</option><option value="showScrollBar">　Show Octave Scroll Bar</option><option value="alwaysShowSettings">　Customize All Instruments</option><option value="instrumentCopyPaste">　Instrument Copy/Paste Buttons</option><option value="enableChannelMuting">　Enable Channel Muting</option><option value="displayBrowserUrl">✓ Display Song Data in URL</option><option value="layout">　Choose Layout...</option><option value="colorTheme">　Light Theme</option><option value="recordingSetup">　Set Up Note Recording...</option></select></div></div><div class="song-settings-area"><div class="editor-controls"><div style="margin: 3px 0; text-align: center; color: var(--secondary-text);">Song Settings</div><div class="selectRow"><span class="tip">Scale:</span><div class="selectContainer"><select title="ionian"><option value="0">easy :)</option><option value="1">easy :(</option><option value="2">island :)</option><option value="3">island :(</option><option value="4">blues :)</option><option value="5">blues :(</option><option value="6">normal :)</option><option value="7">normal :(</option><option value="8">double harmonic :)</option><option value="9">double harmonic :(</option><option value="10">strange</option><option value="11">expert</option><optgroup label="Edit"><option value="forceScale">Snap Notes To Scale</option></optgroup></select></div></div><div class="selectRow"><span class="tip">Key:</span><div class="selectContainer"><select><option value="0">B</option><option value="1">A♯</option><option value="2">A</option><option value="3">G♯</option><option value="4">G</option><option value="5">F♯</option><option value="6">F</option><option value="7">E</option><option value="8">D♯</option><option value="9">D</option><option value="10">C♯</option><option value="11">C</option><optgroup label="Edit"><option value="detectKey">Detect Key</option></optgroup></select></div></div><div class="selectRow"><span class="tip">Tempo:</span><span style="display: flex;"><input style="margin: 0; width: 4em; flex-grow: 1; vertical-align: middle;" type="range" min="0" max="14" value="7" step="1"><input style="width: 3em; margin-left: 0.4em; vertical-align: middle;" type="number" step="1"></span></div><div class="selectRow"><span class="tip">Rhythm:</span><div class="selectContainer"><select><option value="0">÷3 (triplets)</option><option value="1">÷4 (standard)</option><option value="2">÷6</option><option value="3">÷8</option><option value="4">freehand</option><optgroup label="Edit"><option value="forceRhythm">Snap Notes To Rhythm</option></optgroup></select></div></div></div></div><div class="instrument-settings-area"><div class="editor-controls" style="color: var(--pitch3-primary-note);"><div style="margin: 3px 0; text-align: center; color: var(--secondary-text);">Instrument Settings</div><div class="selectRow" style=""><span class="tip">Instrument:</span><div class="instrument-bar" style="--text-color-lit: var(--pitch3-primary-note); --text-color-dim: var(--pitch3-secondary-note); --background-color-lit: var(--pitch3-primary-channel); --background-color-dim: var(--pitch3-secondary-channel);"><button class="">1</button><button class="" style="display: none;">2</button><button type="button" class="remove-instrument" style="display: none;"></button><button type="button" class="add-instrument last-button"></button></div></div><div class="instrumentCopyPasteRow" style="display: none;"><button type="button" class="copy-instrument" title="Copy Instrument (⇧C)">Copy</button><button type="button" class="paste-instrument" title="Paste Instrument (⇧V)">Paste</button></div><div class="selectRow"><span class="tip">Volume:</span><input style="margin: 0;" type="range" min="-7" max="0" value="0" step="1"></div><div class="selectRow"><span class="tip">Type:</span><div class="selectContainer"><select style=""><optgroup label="Edit"><option value="copyInstrument">Copy Instrument (⇧C)</option><option value="pasteInstrument">Paste Instrument (⇧V)</option><option value="randomPreset">Random Preset (R)</option><option value="randomGenerated">Random Generated (⇧R)</option></optgroup><optgroup label="Custom Instruments"><option value="0">chip wave</option><option value="6">pulse width</option><option value="8">supersaw</option><option value="5">harmonics</option><option value="7">picked string</option><option value="3">spectrum</option><option value="1">FM (expert)</option></optgroup><optgroup label="Retro Presets"><option value="64">square wave</option><option value="65">triangle wave</option><option value="66">square lead</option><option value="67">sawtooth lead 1</option><option value="68">sawtooth lead 2</option><option value="70">FM twang</option><option value="71">FM bass</option><option value="72">FM flute</option><option value="73">FM organ</option><option value="74">supersaw lead</option></optgroup><optgroup label="Keyboard Presets"><option value="128">grand piano</option><option value="129">bright piano</option><option value="130">electric grand</option><option value="131">honky-tonk piano</option><option value="132">electric piano 1</option><option value="133">electric piano 2</option><option value="134">harpsichord</option><option value="135">clavinet</option><option value="136">dulcimer</option></optgroup><optgroup label="Idiophone Presets"><option value="192">celesta</option><option value="193">glockenspiel</option><option value="194">music box 1</option><option value="195">music box 2</option><option value="196">vibraphone</option><option value="197">marimba</option><option value="198">kalimba</option><option value="199">xylophone</option><option value="200">tubular bell</option><option value="201">bell synth</option><option value="202">rain drop</option><option value="203">crystal</option><option value="204">tinkle bell</option><option value="205">agogo</option></optgroup><optgroup label="Guitar Presets"><option value="256">nylon guitar</option><option value="257">steel guitar</option><option value="258">jazz guitar</option><option value="259">clean guitar</option><option value="260">muted guitar</option></optgroup><optgroup label="Picked Bass Presets"><option value="320">acoustic bass</option><option value="321">fingered bass</option><option value="322">picked bass</option><option value="323">fretless bass</option><option value="324">slap bass 1</option><option value="325">slap bass 2</option><option value="326">bass synth 1</option><option value="327">bass synth 2</option><option value="328">bass &amp; lead</option><option value="329">dubstep yoi yoi</option></optgroup><optgroup label="Picked String Presets"><option value="384">pizzicato strings</option><option value="385">harp</option><option value="386">sitar</option><option value="387">banjo</option><option value="388">ukulele</option><option value="389">shamisen</option><option value="390">koto</option></optgroup><optgroup label="Distortion Presets"><option value="448">overdrive guitar</option><option value="449">distortion guitar</option><option value="450">charango synth</option><option value="451">guitar harmonics</option><option value="452">PWM overdrive</option><option value="453">PWM distortion</option><option value="454">FM overdrive</option><option value="455">FM distortion</option></optgroup><optgroup label="Bellows Presets"><option value="512">drawbar organ 1</option><option value="513">drawbar organ 2</option><option value="514">percussive organ</option><option value="515">rock organ</option><option value="516">pipe organ</option><option value="517">reed organ</option><option value="518">accordion</option><option value="519">bandoneon</option><option value="520">bagpipe</option></optgroup><optgroup label="String Presets"><option value="576">violin</option><option value="577">viola</option><option value="578">cello</option><option value="579">contrabass</option><option value="580">fiddle</option><option value="581">tremolo strings</option><option value="582">strings</option><option value="583">slow strings</option><option value="584">strings synth 1</option><option value="585">strings synth 2</option><option value="586">orchestra hit 1</option><option value="587">orchestra hit 2</option><option value="588">supersaw string</option></optgroup><optgroup label="Vocal Presets"><option value="640">choir soprano</option><option value="641">choir tenor</option><option value="642">choir bass</option><option value="643">solo soprano</option><option value="644">solo tenor</option><option value="645">solo bass</option><option value="646">voice ooh</option><option value="647">voice synth</option><option value="648">vox synth lead</option><option value="649">tiny robot</option><option value="650">yowie</option><option value="651">mouse</option><option value="652">gumdrop</option><option value="653">echo drop</option><option value="654">dark choir</option></optgroup><optgroup label="Brass Presets"><option value="704">trumpet</option><option value="705">trombone</option><option value="706">tuba</option><option value="707">muted trumpet</option><option value="708">french horn</option><option value="709">brass section</option><option value="710">brass synth 1</option><option value="711">brass synth 2</option><option value="712">pulse brass</option></optgroup><optgroup label="Reed Presets"><option value="768">soprano sax</option><option value="769">alto sax</option><option value="770">tenor sax</option><option value="771">baritone sax</option><option value="772">sax synth</option><option value="773">shehnai</option><option value="774">oboe</option><option value="775">english horn</option><option value="776">bassoon</option><option value="777">clarinet</option><option value="778">harmonica</option></optgroup><optgroup label="Flute Presets"><option value="832">flute</option><option value="833">recorder</option><option value="834">whistle</option><option value="835">ocarina</option><option value="836">piccolo</option><option value="837">shakuhachi</option><option value="838">pan flute</option><option value="839">blown bottle</option><option value="840">calliope</option><option value="841">chiffer</option><option value="842">breath noise</option></optgroup><optgroup label="Pad Presets"><option value="896">new age pad</option><option value="897">warm pad</option><option value="898">polysynth pad</option><option value="899">space voice pad</option><option value="900">bowed glass pad</option><option value="901">metallic pad</option><option value="902">sweep pad</option><option value="903">atmosphere</option><option value="904">brightness</option><option value="905">goblins</option><option value="906">sci-fi</option><option value="907">flutter pad</option><option value="908">feedback pad</option><option value="909">supersaw pad</option></optgroup><optgroup label="Drum Presets"><option value="961">steel pan</option><option value="962">steel pan synth</option><option value="963">timpani</option><option value="964">dark strike</option><option value="971">synth kick</option></optgroup><optgroup label="Novelty Presets"><option value="1024">guitar fret noise</option><option value="1025">fifth saw lead</option><option value="1026">fifth swell</option><option value="1027">soundtrack</option><option value="1030">bird tweet</option><option value="1031">telephone ring</option><option value="1035">scoot</option><option value="1036">buzz saw</option><option value="1037">mosquito</option><option value="1040">theremin</option><option value="1041">sonar ping</option></optgroup></select><select style="display: none;"><optgroup label="Edit"><option value="copyInstrument">Copy Instrument (⇧C)</option><option value="pasteInstrument">Paste Instrument (⇧V)</option><option value="randomPreset">Random Preset (R)</option><option value="randomGenerated">Random Generated (⇧R)</option></optgroup><optgroup label="Custom Instruments"><option value="2">basic noise</option><option value="3">spectrum</option><option value="4">drumset</option></optgroup><optgroup label="Retro Presets"><option value="69">chip noise</option></optgroup><optgroup label="Drum Presets"><option value="960">standard drumset</option><option value="965">woodblock</option><option value="966">taiko drum</option><option value="967">melodic drum</option><option value="968">drum synth</option><option value="969">tom-tom</option><option value="970">metal pipe</option></optgroup><optgroup label="Novelty Presets"><option value="1028">reverse cymbal</option><option value="1029">seashore</option><option value="1032">helicopter</option><option value="1033">applause</option><option value="1034">gunshot</option><option value="1038">breathing</option><option value="1039">klaxon synth</option></optgroup></select></div></div><button type="button" class="customize-instrument" style="">Customize Instrument</button><div class="editor-controls" style="display: none;"><div class="selectRow"><span class="tip">EQ Filter:</span><div class="filterEditor" style="height: 100%; position: relative;"><svg style="background-color: var(--editor-background); touch-action: none;" width="100%" height="100%" viewBox="0 0 120 26" preserveAspectRatio="none"><path fill="var(--ui-widget-background)" pointer-events="none" d="M 0 26 L -1.76 27.16 L 1.76 25.32 L 5.29 23.47 L 8.82 21.59 L 12.35 19.71 L 15.88 17.83 L 19.41 16.04 L 22.94 14.49 L 26.47 13.45 L 30 13.08 L 33.53 13.31 L 37.06 14.01 L 40.59 15.27 L 44.12 17.36 L 47.65 19.48 L 51.18 19.18 L 54.71 19.71 L 58.24 21.28 L 61.76 18.29 L 65.29 15.86 L 68.82 14.57 L 72.35 13.86 L 75.88 13.45 L 79.41 13.22 L 82.94 13.19 L 86.47 13.47 L 90 14.29 L 93.53 16.03 L 97.06 18.94 L 100.59 22.85 L 104.12 27.5 L 107.65 32.87 L 111.18 39.31 L 114.71 47.85 L 118.24 62.19 L 121.76 118.18 L 120 26 L 0 26 z "></path><path fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="3, 2" pointer-events="none" d="M 120 14.785714285714285 L 90 14.785714285714285 M 0 13 L 26.470588235294116 13 M 120 13 L 93.52941176470588 13 "></path><circle fill="white" stroke="none" pointer-events="none" r="4" style="display: none;" cx="97.05882352941177" cy="0.5"></circle><path fill="currentColor" pointer-events="none" d="M 88 14.785714285714285 a 2 2 0 1 0 4 0 a 2 2 0 1 0 -4 0 M 24.470588235294116 13 a 2 2 0 1 0 4 0 a 2 2 0 1 0 -4 0 M 91.52941176470588 13 a 2 2 0 1 0 4 0 a 2 2 0 1 0 -4 0 M 45.64705882352941 18.357142857142858 a 2 2 0 1 0 4 0 a 2 2 0 1 0 -4 0 M 56.23529411764706 20.142857142857142 a 2 2 0 1 0 4 0 a 2 2 0 1 0 -4 0 "></path></svg><div style="position: absolute; bottom: 0; left: 2px; font-size: 8px; line-height: 1; pointer-events: none;"></div></div></div><div class="selectRow" style=""><span class="tip">Fade In/Out:</span><div class="fadeInOut" style="height: 100%;"><svg style="background-color: var(--editor-background); touch-action: none; cursor: crosshair;" width="100%" height="100%" viewBox="0 0 120 26" preserveAspectRatio="none"><path fill="var(--ui-widget-background)" pointer-events="none" d="M 0 26 L 16.733333333333334 0 L 83.6 0 L 101.3 26 z"></path><path fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="3, 2" pointer-events="none" d="M 83.6 0 L 83.6 26"></path><path fill="none" stroke="currentColor" stroke-width="2" pointer-events="none" d="M 16.733333333333334 0 L 16.733333333333334 26 M 101.3 0 L 101.3 26"></path></svg></div></div><div class="selectRow" style=""><span class="tip">Wave:</span><div class="selectContainer"><select><option value="0">rounded</option><option value="1">triangle</option><option value="2">square</option><option value="3">1/4 pulse</option><option value="4">1/8 pulse</option><option value="5">sawtooth</option><option value="6">double saw</option><option value="7">double pulse</option><option value="8">spiky</option></select></div></div><div class="selectRow" style="display: none;"><span class="tip">Noise:</span><div class="selectContainer"><select><option value="0">retro</option><option value="1">white</option><option value="2">clang</option><option value="3">buzz</option><option value="4">hollow</option></select></div></div><div class="selectRow" style="display: none;"><span class="tip">Algorithm:</span><div class="selectContainer"><select><option value="0">1←(2 3 4)</option><option value="1">1←(2 3←4)</option><option value="2">1←2←(3 4)</option><option value="3">1←(2 3)←4</option><option value="4">1←2←3←4</option><option value="5">1←3 2←4</option><option value="6">1 2←(3 4)</option><option value="7">1 2←3←4</option><option value="8">(1 2)←3←4</option><option value="9">(1 2)←(3 4)</option><option value="10">1 2 3←4</option><option value="11">(1 2 3)←4</option><option value="12">1 2 3 4</option></select></div></div><div class="editor-controls" style="display: none;"><div class="selectRow" style="color: var(--secondary-text); height: 1em; margin-top: 0.5em;"><div style="margin-right: .1em; visibility: hidden;">1.</div><div style="width: 3em; margin-right: .3em;" class="tip">Freq:</div><div class="tip">Volume:</div></div><div class="selectRow" style="color: var(--primary-text);"><div style="margin-right: .1em; color: var(--secondary-text);">1.</div><div class="selectContainer" style="width: 3em; margin-right: .3em;"><select style="width: 100%;" title="Voice 1 Frequency"><option value="0">1×</option><option value="1">~1×</option><option value="2">2×</option><option value="3">~2×</option><option value="4">3×</option><option value="5">4×</option><option value="6">5×</option><option value="7">6×</option><option value="8">7×</option><option value="9">8×</option><option value="10">9×</option><option value="11">11×</option><option value="12">13×</option><option value="13">16×</option><option value="14">20×</option></select></div><input type="range" min="0" max="15" value="0" step="1" title="Voice 1 Volume"></div><div class="selectRow"><div style="margin-right: .1em; color: var(--secondary-text);">2.</div><div class="selectContainer" style="width: 3em; margin-right: .3em;"><select style="width: 100%;" title="Modulator 2 Frequency"><option value="0">1×</option><option value="1">~1×</option><option value="2">2×</option><option value="3">~2×</option><option value="4">3×</option><option value="5">4×</option><option value="6">5×</option><option value="7">6×</option><option value="8">7×</option><option value="9">8×</option><option value="10">9×</option><option value="11">11×</option><option value="12">13×</option><option value="13">16×</option><option value="14">20×</option></select></div><input type="range" min="0" max="15" value="0" step="1" title="Modulator 2 Amplitude"></div><div class="selectRow"><div style="margin-right: .1em; color: var(--secondary-text);">3.</div><div class="selectContainer" style="width: 3em; margin-right: .3em;"><select style="width: 100%;" title="Modulator 3 Frequency"><option value="0">1×</option><option value="1">~1×</option><option value="2">2×</option><option value="3">~2×</option><option value="4">3×</option><option value="5">4×</option><option value="6">5×</option><option value="7">6×</option><option value="8">7×</option><option value="9">8×</option><option value="10">9×</option><option value="11">11×</option><option value="12">13×</option><option value="13">16×</option><option value="14">20×</option></select></div><input type="range" min="0" max="15" value="0" step="1" title="Modulator 3 Amplitude"></div><div class="selectRow"><div style="margin-right: .1em; color: var(--secondary-text);">4.</div><div class="selectContainer" style="width: 3em; margin-right: .3em;"><select style="width: 100%;" title="Modulator 4 Frequency"><option value="0">1×</option><option value="1">~1×</option><option value="2">2×</option><option value="3">~2×</option><option value="4">3×</option><option value="5">4×</option><option value="6">5×</option><option value="7">6×</option><option value="8">7×</option><option value="9">8×</option><option value="10">9×</option><option value="11">11×</option><option value="12">13×</option><option value="13">16×</option><option value="14">20×</option></select></div><input type="range" min="0" max="15" value="0" step="1" title="Modulator 4 Amplitude"></div></div><div class="selectRow" style="display: none;"><span class="tip">Feedback:</span><div class="selectContainer"><select><option value="0">1⟲</option><option value="1">2⟲</option><option value="2">3⟲</option><option value="3">4⟲</option><option value="4">1⟲ 2⟲</option><option value="5">3⟲ 4⟲</option><option value="6">1⟲ 2⟲ 3⟲</option><option value="7">2⟲ 3⟲ 4⟲</option><option value="8">1⟲ 2⟲ 3⟲ 4⟲</option><option value="9">1→2</option><option value="10">1→3</option><option value="11">1→4</option><option value="12">2→3</option><option value="13">2→4</option><option value="14">3→4</option><option value="15">1→3 2→4</option><option value="16">1→4 2→3</option><option value="17">1→2→3→4</option></select></div></div><div class="selectRow" style="display: none;"><span class="tip">Fdback Vol:</span><input type="range" min="0" max="15" value="0" step="1" title="Feedback Amplitude"></div><div class="selectRow" style="display: none;"><span class="tip">Spectrum:</span><div class="spectrum" style="height: 100%;"><svg style="background-color: var(--editor-background); touch-action: none; cursor: crosshair;" width="100%" height="100%" viewBox="0 0 120 26" preserveAspectRatio="none"><path fill="var(--ui-widget-background)" pointer-events="none" d="M 0 26 L 3.75 1 L 7.5 4.57 L 11.25 8.14 L 15 8.14 L 18.75 8.14 L 22.5 11.71 L 26.25 11.71 L 30 11.71 L 33.75 11.71 L 37.5 11.71 L 41.25 15.29 L 45 15.29 L 48.75 15.29 L 52.5 15.29 L 56.25 15.29 L 60 15.29 L 63.75 15.29 L 67.5 15.29 L 71.25 15.29 L 75 15.29 L 78.75 15.29 L 82.5 18.86 L 86.25 18.86 L 90 18.86 L 93.75 18.86 L 97.5 18.86 L 101.25 18.86 L 105 18.86 L 108.75 18.86 L 112.5 18.86 L 119 18.86 L 120 18.86 L 120 26 L 0 26 z "></path><svg pointer-events="none"><rect fill="var(--tonic)" x="2.75" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="29" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="55.25" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="81.5" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="107.75" y="0" width="2" height="26"></rect></svg><svg pointer-events="none" style="display: none;"><rect fill="var(--fifth-note)" x="17.75" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="44" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="70.25" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="96.5" y="0" width="2" height="26"></rect></svg><path fill="none" stroke="currentColor" stroke-width="2" pointer-events="none" d="M 0 26 L 3.75 1 L 7.5 4.57 L 11.25 8.14 L 15 8.14 L 18.75 8.14 L 22.5 11.71 L 26.25 11.71 L 30 11.71 L 33.75 11.71 L 37.5 11.71 L 41.25 15.29 L 45 15.29 L 48.75 15.29 L 52.5 15.29 L 56.25 15.29 L 60 15.29 L 63.75 15.29 L 67.5 15.29 L 71.25 15.29 L 75 15.29 L 78.75 15.29 L 82.5 18.86 L 86.25 18.86 L 90 18.86 L 93.75 18.86 L 97.5 18.86 L 101.25 18.86 L 105 18.86 L 108.75 18.86 L 112.5 18.86 L 119 18.86 "></path><path fill="currentColor" pointer-events="none" d="M 120 18.86 L 116 14.86 L 116 22.86 z"></path></svg></div></div><div class="selectRow" style="display: none;"><span class="tip">Harmonics:</span><div class="harmonics" style="height: 100%;"><svg style="background-color: var(--editor-background); touch-action: none; cursor: crosshair;" width="100%" height="100%" viewBox="0 0 120 26" preserveAspectRatio="none"><svg pointer-events="none"><rect fill="var(--tonic)" x="1.074074074074074" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="5.222222222222222" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="13.518518518518519" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="30.11111111111111" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="63.29629629629629" y="0" width="2" height="26"></rect></svg><svg pointer-events="none" style="display: none;"><rect fill="var(--fifth-note)" x="9.37037037037037" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="21.814814814814813" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="46.7037037037037" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="96.48148148148148" y="0" width="2" height="26"></rect></svg><path fill="none" stroke="currentColor" stroke-width="2" pointer-events="none" d="M 2.07 26 L 2.07 0 M 6.22 26 L 6.22 0 M 10.37 26 L 10.37 3.71 M 14.52 26 L 14.52 11.14 M 18.67 26 L 18.67 18.57 M 22.81 26 L 22.81 18.57 M 26.96 26 L 26.96 11.14 M 31.11 26 L 31.11 7.43 M 35.26 26 L 35.26 11.14 M 39.41 26 L 39.41 18.57 M 43.56 26 L 43.56 22.29 M 47.7 26 L 47.7 22.29 M 51.85 26 L 51.85 22.29 M 56 26 L 56 18.57 M 60.15 26 L 60.15 14.86 M 64.3 26 L 64.3 11.14 M 68.44 26 L 68.44 14.86 M 72.59 26 L 72.59 18.57 M 76.74 26 L 76.74 22.29 M 80.89 26 L 80.89 22.29 M 85.04 26 L 85.04 22.29 M 89.19 26 L 89.19 22.29 M 93.33 26 L 93.33 22.29 M 97.48 26 L 97.48 22.29 "></path><svg pointer-events="none"><rect fill="currentColor" x="119" y="26" width="1" height="0"></rect><rect fill="currentColor" x="117" y="26" width="1" height="0"></rect><rect fill="currentColor" x="115" y="26" width="1" height="0"></rect><rect fill="currentColor" x="113" y="26" width="1" height="0"></rect></svg></svg></div></div><div class="editor-controls" style="display: none;"><div class="selectRow"><span class="tip">Envelope:</span><span class="tip">Spectrum:</span></div><div class="selectRow"><div class="selectContainer" style="width: 5em; margin-right: .3em;"><select style="width: 100%;" title="Filter Envelope"><option value="0">none</option><option value="1">note size</option><option value="2">punch</option><option value="3">flare 1</option><option value="4">flare 2</option><option value="5">flare 3</option><option value="6">twang 1</option><option value="7">twang 2</option><option value="8">twang 3</option><option value="9">swell 1</option><option value="10">swell 2</option><option value="11">swell 3</option><option value="12">tremolo1</option><option value="13">tremolo2</option><option value="14">tremolo3</option><option value="15">tremolo4</option><option value="16">tremolo5</option><option value="17">tremolo6</option><option value="18">decay 1</option><option value="19">decay 2</option><option value="20">decay 3</option></select></div><div class="spectrum" style="height: 100%;"><svg style="background-color: var(--editor-background); touch-action: none; cursor: crosshair;" width="100%" height="100%" viewBox="0 0 120 26" preserveAspectRatio="none"><path fill="var(--ui-widget-background)" pointer-events="none" d="M 0 26 L 3.75 22.43 L 7.5 22.43 L 11.25 22.43 L 15 22.43 L 18.75 18.86 L 22.5 22.43 L 26.25 22.43 L 30 18.86 L 33.75 22.43 L 37.5 15.29 L 41.25 22.43 L 45 15.29 L 48.75 11.71 L 52.5 4.57 L 56.25 11.71 L 60 11.71 L 63.75 1 L 67.5 11.71 L 71.25 15.29 L 75 15.29 L 78.75 11.71 L 82.5 1 L 86.25 11.71 L 90 15.29 L 93.75 18.86 L 97.5 22.43 L 101.25 26 M 105 26 M 108.75 26 M 112.5 26 L 120 26 L 120 26 L 0 26 z "></path><svg pointer-events="none"><rect fill="var(--tonic)" x="2.75" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="29" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="55.25" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="81.5" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="107.75" y="0" width="2" height="26"></rect></svg><svg pointer-events="none" style="display: none;"><rect fill="var(--fifth-note)" x="17.75" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="44" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="70.25" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="96.5" y="0" width="2" height="26"></rect></svg><path fill="none" stroke="currentColor" stroke-width="2" pointer-events="none" d="M 0 26 L 3.75 22.43 L 7.5 22.43 L 11.25 22.43 L 15 22.43 L 18.75 18.86 L 22.5 22.43 L 26.25 22.43 L 30 18.86 L 33.75 22.43 L 37.5 15.29 L 41.25 22.43 L 45 15.29 L 48.75 11.71 L 52.5 4.57 L 56.25 11.71 L 60 11.71 L 63.75 1 L 67.5 11.71 L 71.25 15.29 L 75 15.29 L 78.75 11.71 L 82.5 1 L 86.25 11.71 L 90 15.29 L 93.75 18.86 L 97.5 22.43 L 101.25 26 M 105 26 M 108.75 26 M 112.5 26 "></path><path fill="currentColor" pointer-events="none" d="M 120 26 L 116 22 L 116 30 z" style="display: none;"></path></svg></div></div><div class="selectRow"><div class="selectContainer" style="width: 5em; margin-right: .3em;"><select style="width: 100%;" title="Filter Envelope"><option value="0">none</option><option value="1">note size</option><option value="2">punch</option><option value="3">flare 1</option><option value="4">flare 2</option><option value="5">flare 3</option><option value="6">twang 1</option><option value="7">twang 2</option><option value="8">twang 3</option><option value="9">swell 1</option><option value="10">swell 2</option><option value="11">swell 3</option><option value="12">tremolo1</option><option value="13">tremolo2</option><option value="14">tremolo3</option><option value="15">tremolo4</option><option value="16">tremolo5</option><option value="17">tremolo6</option><option value="18">decay 1</option><option value="19">decay 2</option><option value="20">decay 3</option></select></div><div class="spectrum" style="height: 100%;"><svg style="background-color: var(--editor-background); touch-action: none; cursor: crosshair;" width="100%" height="100%" viewBox="0 0 120 26" preserveAspectRatio="none"><path fill="var(--ui-widget-background)" pointer-events="none" d="M 0 26 M 3.75 26 M 7.5 26 L 11.25 22.43 L 15 22.43 L 18.75 22.43 L 22.5 22.43 L 26.25 18.86 L 30 18.86 L 33.75 18.86 L 37.5 15.29 L 41.25 15.29 L 45 15.29 L 48.75 11.71 L 52.5 11.71 L 56.25 8.14 L 60 8.14 L 63.75 4.57 L 67.5 4.57 L 71.25 1 L 75 1 L 78.75 1 L 82.5 1 L 86.25 1 L 90 1 L 93.75 1 L 97.5 1 L 101.25 4.57 L 105 11.71 L 108.75 18.86 L 112.5 26 L 120 26 L 120 26 L 0 26 z "></path><svg pointer-events="none"><rect fill="var(--tonic)" x="2.75" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="29" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="55.25" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="81.5" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="107.75" y="0" width="2" height="26"></rect></svg><svg pointer-events="none" style="display: none;"><rect fill="var(--fifth-note)" x="17.75" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="44" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="70.25" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="96.5" y="0" width="2" height="26"></rect></svg><path fill="none" stroke="currentColor" stroke-width="2" pointer-events="none" d="M 0 26 M 3.75 26 M 7.5 26 L 11.25 22.43 L 15 22.43 L 18.75 22.43 L 22.5 22.43 L 26.25 18.86 L 30 18.86 L 33.75 18.86 L 37.5 15.29 L 41.25 15.29 L 45 15.29 L 48.75 11.71 L 52.5 11.71 L 56.25 8.14 L 60 8.14 L 63.75 4.57 L 67.5 4.57 L 71.25 1 L 75 1 L 78.75 1 L 82.5 1 L 86.25 1 L 90 1 L 93.75 1 L 97.5 1 L 101.25 4.57 L 105 11.71 L 108.75 18.86 L 112.5 26 "></path><path fill="currentColor" pointer-events="none" d="M 120 26 L 116 22 L 116 30 z" style="display: none;"></path></svg></div></div><div class="selectRow"><div class="selectContainer" style="width: 5em; margin-right: .3em;"><select style="width: 100%;" title="Filter Envelope"><option value="0">none</option><option value="1">note size</option><option value="2">punch</option><option value="3">flare 1</option><option value="4">flare 2</option><option value="5">flare 3</option><option value="6">twang 1</option><option value="7">twang 2</option><option value="8">twang 3</option><option value="9">swell 1</option><option value="10">swell 2</option><option value="11">swell 3</option><option value="12">tremolo1</option><option value="13">tremolo2</option><option value="14">tremolo3</option><option value="15">tremolo4</option><option value="16">tremolo5</option><option value="17">tremolo6</option><option value="18">decay 1</option><option value="19">decay 2</option><option value="20">decay 3</option></select></div><div class="spectrum" style="height: 100%;"><svg style="background-color: var(--editor-background); touch-action: none; cursor: crosshair;" width="100%" height="100%" viewBox="0 0 120 26" preserveAspectRatio="none"><path fill="var(--ui-widget-background)" pointer-events="none" d="M 0 26 L 3.75 11.71 L 7.5 11.71 L 11.25 11.71 L 15 15.29 L 18.75 11.71 L 22.5 11.71 L 26.25 15.29 L 30 15.29 L 33.75 11.71 L 37.5 15.29 L 41.25 15.29 L 45 15.29 L 48.75 8.14 L 52.5 11.71 L 56.25 15.29 L 60 11.71 L 63.75 4.57 L 67.5 8.14 L 71.25 11.71 L 75 4.57 L 78.75 8.14 L 82.5 11.71 L 86.25 4.57 L 90 1 L 93.75 8.14 L 97.5 4.57 L 101.25 4.57 L 105 4.57 L 108.75 4.57 L 112.5 4.57 L 119 4.57 L 120 4.57 L 120 26 L 0 26 z "></path><svg pointer-events="none"><rect fill="var(--tonic)" x="2.75" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="29" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="55.25" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="81.5" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="107.75" y="0" width="2" height="26"></rect></svg><svg pointer-events="none" style="display: none;"><rect fill="var(--fifth-note)" x="17.75" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="44" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="70.25" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="96.5" y="0" width="2" height="26"></rect></svg><path fill="none" stroke="currentColor" stroke-width="2" pointer-events="none" d="M 0 26 L 3.75 11.71 L 7.5 11.71 L 11.25 11.71 L 15 15.29 L 18.75 11.71 L 22.5 11.71 L 26.25 15.29 L 30 15.29 L 33.75 11.71 L 37.5 15.29 L 41.25 15.29 L 45 15.29 L 48.75 8.14 L 52.5 11.71 L 56.25 15.29 L 60 11.71 L 63.75 4.57 L 67.5 8.14 L 71.25 11.71 L 75 4.57 L 78.75 8.14 L 82.5 11.71 L 86.25 4.57 L 90 1 L 93.75 8.14 L 97.5 4.57 L 101.25 4.57 L 105 4.57 L 108.75 4.57 L 112.5 4.57 L 119 4.57 "></path><path fill="currentColor" pointer-events="none" d="M 120 4.57 L 116 0.57 L 116 8.57 z"></path></svg></div></div><div class="selectRow"><div class="selectContainer" style="width: 5em; margin-right: .3em;"><select style="width: 100%;" title="Filter Envelope"><option value="0">none</option><option value="1">note size</option><option value="2">punch</option><option value="3">flare 1</option><option value="4">flare 2</option><option value="5">flare 3</option><option value="6">twang 1</option><option value="7">twang 2</option><option value="8">twang 3</option><option value="9">swell 1</option><option value="10">swell 2</option><option value="11">swell 3</option><option value="12">tremolo1</option><option value="13">tremolo2</option><option value="14">tremolo3</option><option value="15">tremolo4</option><option value="16">tremolo5</option><option value="17">tremolo6</option><option value="18">decay 1</option><option value="19">decay 2</option><option value="20">decay 3</option></select></div><div class="spectrum" style="height: 100%;"><svg style="background-color: var(--editor-background); touch-action: none; cursor: crosshair;" width="100%" height="100%" viewBox="0 0 120 26" preserveAspectRatio="none"><path fill="var(--ui-widget-background)" pointer-events="none" d="M 0 26 L 3.75 15.29 L 7.5 18.86 L 11.25 18.86 L 15 15.29 L 18.75 18.86 L 22.5 18.86 L 26.25 18.86 L 30 11.71 L 33.75 18.86 L 37.5 18.86 L 41.25 18.86 L 45 11.71 L 48.75 15.29 L 52.5 15.29 L 56.25 18.86 L 60 18.86 L 63.75 11.71 L 67.5 15.29 L 71.25 15.29 L 75 15.29 L 78.75 8.14 L 82.5 15.29 L 86.25 15.29 L 90 8.14 L 93.75 11.71 L 97.5 8.14 L 101.25 8.14 L 105 8.14 L 108.75 8.14 L 112.5 8.14 L 119 8.14 L 120 8.14 L 120 26 L 0 26 z "></path><svg pointer-events="none"><rect fill="var(--tonic)" x="2.75" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="29" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="55.25" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="81.5" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="107.75" y="0" width="2" height="26"></rect></svg><svg pointer-events="none" style="display: none;"><rect fill="var(--fifth-note)" x="17.75" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="44" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="70.25" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="96.5" y="0" width="2" height="26"></rect></svg><path fill="none" stroke="currentColor" stroke-width="2" pointer-events="none" d="M 0 26 L 3.75 15.29 L 7.5 18.86 L 11.25 18.86 L 15 15.29 L 18.75 18.86 L 22.5 18.86 L 26.25 18.86 L 30 11.71 L 33.75 18.86 L 37.5 18.86 L 41.25 18.86 L 45 11.71 L 48.75 15.29 L 52.5 15.29 L 56.25 18.86 L 60 18.86 L 63.75 11.71 L 67.5 15.29 L 71.25 15.29 L 75 15.29 L 78.75 8.14 L 82.5 15.29 L 86.25 15.29 L 90 8.14 L 93.75 11.71 L 97.5 8.14 L 101.25 8.14 L 105 8.14 L 108.75 8.14 L 112.5 8.14 L 119 8.14 "></path><path fill="currentColor" pointer-events="none" d="M 120 8.14 L 116 4.14 L 116 12.14 z"></path></svg></div></div><div class="selectRow"><div class="selectContainer" style="width: 5em; margin-right: .3em;"><select style="width: 100%;" title="Filter Envelope"><option value="0">none</option><option value="1">note size</option><option value="2">punch</option><option value="3">flare 1</option><option value="4">flare 2</option><option value="5">flare 3</option><option value="6">twang 1</option><option value="7">twang 2</option><option value="8">twang 3</option><option value="9">swell 1</option><option value="10">swell 2</option><option value="11">swell 3</option><option value="12">tremolo1</option><option value="13">tremolo2</option><option value="14">tremolo3</option><option value="15">tremolo4</option><option value="16">tremolo5</option><option value="17">tremolo6</option><option value="18">decay 1</option><option value="19">decay 2</option><option value="20">decay 3</option></select></div><div class="spectrum" style="height: 100%;"><svg style="background-color: var(--editor-background); touch-action: none; cursor: crosshair;" width="100%" height="100%" viewBox="0 0 120 26" preserveAspectRatio="none"><path fill="var(--ui-widget-background)" pointer-events="none" d="M 0 26 L 3.75 18.86 L 7.5 15.29 L 11.25 15.29 L 15 15.29 L 18.75 15.29 L 22.5 18.86 L 26.25 18.86 L 30 15.29 L 33.75 18.86 L 37.5 18.86 L 41.25 15.29 L 45 18.86 L 48.75 22.43 L 52.5 18.86 L 56.25 15.29 L 60 18.86 L 63.75 15.29 L 67.5 18.86 L 71.25 11.71 L 75 18.86 L 78.75 15.29 L 82.5 11.71 L 86.25 15.29 L 90 8.14 L 93.75 15.29 L 97.5 8.14 L 101.25 11.71 L 105 11.71 L 108.75 8.14 L 112.5 8.14 L 119 8.14 L 120 8.14 L 120 26 L 0 26 z "></path><svg pointer-events="none"><rect fill="var(--tonic)" x="2.75" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="29" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="55.25" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="81.5" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="107.75" y="0" width="2" height="26"></rect></svg><svg pointer-events="none" style="display: none;"><rect fill="var(--fifth-note)" x="17.75" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="44" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="70.25" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="96.5" y="0" width="2" height="26"></rect></svg><path fill="none" stroke="currentColor" stroke-width="2" pointer-events="none" d="M 0 26 L 3.75 18.86 L 7.5 15.29 L 11.25 15.29 L 15 15.29 L 18.75 15.29 L 22.5 18.86 L 26.25 18.86 L 30 15.29 L 33.75 18.86 L 37.5 18.86 L 41.25 15.29 L 45 18.86 L 48.75 22.43 L 52.5 18.86 L 56.25 15.29 L 60 18.86 L 63.75 15.29 L 67.5 18.86 L 71.25 11.71 L 75 18.86 L 78.75 15.29 L 82.5 11.71 L 86.25 15.29 L 90 8.14 L 93.75 15.29 L 97.5 8.14 L 101.25 11.71 L 105 11.71 L 108.75 8.14 L 112.5 8.14 L 119 8.14 "></path><path fill="currentColor" pointer-events="none" d="M 120 8.14 L 116 4.14 L 116 12.14 z"></path></svg></div></div><div class="selectRow"><div class="selectContainer" style="width: 5em; margin-right: .3em;"><select style="width: 100%;" title="Filter Envelope"><option value="0">none</option><option value="1">note size</option><option value="2">punch</option><option value="3">flare 1</option><option value="4">flare 2</option><option value="5">flare 3</option><option value="6">twang 1</option><option value="7">twang 2</option><option value="8">twang 3</option><option value="9">swell 1</option><option value="10">swell 2</option><option value="11">swell 3</option><option value="12">tremolo1</option><option value="13">tremolo2</option><option value="14">tremolo3</option><option value="15">tremolo4</option><option value="16">tremolo5</option><option value="17">tremolo6</option><option value="18">decay 1</option><option value="19">decay 2</option><option value="20">decay 3</option></select></div><div class="spectrum" style="height: 100%;"><svg style="background-color: var(--editor-background); touch-action: none; cursor: crosshair;" width="100%" height="100%" viewBox="0 0 120 26" preserveAspectRatio="none"><path fill="var(--ui-widget-background)" pointer-events="none" d="M 0 26 L 3.75 15.29 L 7.5 15.29 L 11.25 15.29 L 15 8.14 L 18.75 18.86 L 22.5 18.86 L 26.25 15.29 L 30 15.29 L 33.75 15.29 L 37.5 18.86 L 41.25 15.29 L 45 15.29 L 48.75 15.29 L 52.5 18.86 L 56.25 18.86 L 60 15.29 L 63.75 15.29 L 67.5 18.86 L 71.25 18.86 L 75 18.86 L 78.75 11.71 L 82.5 22.43 L 86.25 11.71 L 90 15.29 L 93.75 15.29 L 97.5 11.71 L 101.25 15.29 L 105 15.29 L 108.75 11.71 L 112.5 11.71 L 119 11.71 L 120 11.71 L 120 26 L 0 26 z "></path><svg pointer-events="none"><rect fill="var(--tonic)" x="2.75" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="29" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="55.25" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="81.5" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="107.75" y="0" width="2" height="26"></rect></svg><svg pointer-events="none" style="display: none;"><rect fill="var(--fifth-note)" x="17.75" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="44" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="70.25" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="96.5" y="0" width="2" height="26"></rect></svg><path fill="none" stroke="currentColor" stroke-width="2" pointer-events="none" d="M 0 26 L 3.75 15.29 L 7.5 15.29 L 11.25 15.29 L 15 8.14 L 18.75 18.86 L 22.5 18.86 L 26.25 15.29 L 30 15.29 L 33.75 15.29 L 37.5 18.86 L 41.25 15.29 L 45 15.29 L 48.75 15.29 L 52.5 18.86 L 56.25 18.86 L 60 15.29 L 63.75 15.29 L 67.5 18.86 L 71.25 18.86 L 75 18.86 L 78.75 11.71 L 82.5 22.43 L 86.25 11.71 L 90 15.29 L 93.75 15.29 L 97.5 11.71 L 101.25 15.29 L 105 15.29 L 108.75 11.71 L 112.5 11.71 L 119 11.71 "></path><path fill="currentColor" pointer-events="none" d="M 120 11.71 L 116 7.71 L 116 15.71 z"></path></svg></div></div><div class="selectRow"><div class="selectContainer" style="width: 5em; margin-right: .3em;"><select style="width: 100%;" title="Filter Envelope"><option value="0">none</option><option value="1">note size</option><option value="2">punch</option><option value="3">flare 1</option><option value="4">flare 2</option><option value="5">flare 3</option><option value="6">twang 1</option><option value="7">twang 2</option><option value="8">twang 3</option><option value="9">swell 1</option><option value="10">swell 2</option><option value="11">swell 3</option><option value="12">tremolo1</option><option value="13">tremolo2</option><option value="14">tremolo3</option><option value="15">tremolo4</option><option value="16">tremolo5</option><option value="17">tremolo6</option><option value="18">decay 1</option><option value="19">decay 2</option><option value="20">decay 3</option></select></div><div class="spectrum" style="height: 100%;"><svg style="background-color: var(--editor-background); touch-action: none; cursor: crosshair;" width="100%" height="100%" viewBox="0 0 120 26" preserveAspectRatio="none"><path fill="var(--ui-widget-background)" pointer-events="none" d="M 0 26 M 3.75 26 M 7.5 26 L 11.25 22.43 L 15 22.43 L 18.75 22.43 L 22.5 22.43 L 26.25 18.86 L 30 18.86 L 33.75 18.86 L 37.5 15.29 L 41.25 15.29 L 45 15.29 L 48.75 11.71 L 52.5 11.71 L 56.25 11.71 L 60 8.14 L 63.75 8.14 L 67.5 8.14 L 71.25 8.14 L 75 8.14 L 78.75 8.14 L 82.5 8.14 L 86.25 8.14 L 90 11.71 L 93.75 11.71 L 97.5 11.71 L 101.25 11.71 L 105 15.29 L 108.75 15.29 L 112.5 15.29 L 119 15.29 L 120 15.29 L 120 26 L 0 26 z "></path><svg pointer-events="none"><rect fill="var(--tonic)" x="2.75" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="29" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="55.25" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="81.5" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="107.75" y="0" width="2" height="26"></rect></svg><svg pointer-events="none" style="display: none;"><rect fill="var(--fifth-note)" x="17.75" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="44" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="70.25" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="96.5" y="0" width="2" height="26"></rect></svg><path fill="none" stroke="currentColor" stroke-width="2" pointer-events="none" d="M 0 26 M 3.75 26 M 7.5 26 L 11.25 22.43 L 15 22.43 L 18.75 22.43 L 22.5 22.43 L 26.25 18.86 L 30 18.86 L 33.75 18.86 L 37.5 15.29 L 41.25 15.29 L 45 15.29 L 48.75 11.71 L 52.5 11.71 L 56.25 11.71 L 60 8.14 L 63.75 8.14 L 67.5 8.14 L 71.25 8.14 L 75 8.14 L 78.75 8.14 L 82.5 8.14 L 86.25 8.14 L 90 11.71 L 93.75 11.71 L 97.5 11.71 L 101.25 11.71 L 105 15.29 L 108.75 15.29 L 112.5 15.29 L 119 15.29 "></path><path fill="currentColor" pointer-events="none" d="M 120 15.29 L 116 11.29 L 116 19.29 z"></path></svg></div></div><div class="selectRow"><div class="selectContainer" style="width: 5em; margin-right: .3em;"><select style="width: 100%;" title="Filter Envelope"><option value="0">none</option><option value="1">note size</option><option value="2">punch</option><option value="3">flare 1</option><option value="4">flare 2</option><option value="5">flare 3</option><option value="6">twang 1</option><option value="7">twang 2</option><option value="8">twang 3</option><option value="9">swell 1</option><option value="10">swell 2</option><option value="11">swell 3</option><option value="12">tremolo1</option><option value="13">tremolo2</option><option value="14">tremolo3</option><option value="15">tremolo4</option><option value="16">tremolo5</option><option value="17">tremolo6</option><option value="18">decay 1</option><option value="19">decay 2</option><option value="20">decay 3</option></select></div><div class="spectrum" style="height: 100%;"><svg style="background-color: var(--editor-background); touch-action: none; cursor: crosshair;" width="100%" height="100%" viewBox="0 0 120 26" preserveAspectRatio="none"><path fill="var(--ui-widget-background)" pointer-events="none" d="M 0 26 M 3.75 26 L 7.5 22.43 L 11.25 18.86 L 15 15.29 L 18.75 4.57 L 22.5 8.14 L 26.25 18.86 L 30 15.29 L 33.75 15.29 L 37.5 15.29 L 41.25 15.29 L 45 18.86 L 48.75 8.14 L 52.5 18.86 L 56.25 8.14 L 60 18.86 L 63.75 15.29 L 67.5 15.29 L 71.25 15.29 L 75 15.29 L 78.75 11.71 L 82.5 15.29 L 86.25 15.29 L 90 11.71 L 93.75 15.29 L 97.5 15.29 L 101.25 15.29 L 105 11.71 L 108.75 11.71 L 112.5 11.71 L 119 11.71 L 120 11.71 L 120 26 L 0 26 z "></path><svg pointer-events="none"><rect fill="var(--tonic)" x="2.75" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="29" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="55.25" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="81.5" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="107.75" y="0" width="2" height="26"></rect></svg><svg pointer-events="none" style="display: none;"><rect fill="var(--fifth-note)" x="17.75" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="44" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="70.25" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="96.5" y="0" width="2" height="26"></rect></svg><path fill="none" stroke="currentColor" stroke-width="2" pointer-events="none" d="M 0 26 M 3.75 26 L 7.5 22.43 L 11.25 18.86 L 15 15.29 L 18.75 4.57 L 22.5 8.14 L 26.25 18.86 L 30 15.29 L 33.75 15.29 L 37.5 15.29 L 41.25 15.29 L 45 18.86 L 48.75 8.14 L 52.5 18.86 L 56.25 8.14 L 60 18.86 L 63.75 15.29 L 67.5 15.29 L 71.25 15.29 L 75 15.29 L 78.75 11.71 L 82.5 15.29 L 86.25 15.29 L 90 11.71 L 93.75 15.29 L 97.5 15.29 L 101.25 15.29 L 105 11.71 L 108.75 11.71 L 112.5 11.71 L 119 11.71 "></path><path fill="currentColor" pointer-events="none" d="M 120 11.71 L 116 7.71 L 116 15.71 z"></path></svg></div></div><div class="selectRow"><div class="selectContainer" style="width: 5em; margin-right: .3em;"><select style="width: 100%;" title="Filter Envelope"><option value="0">none</option><option value="1">note size</option><option value="2">punch</option><option value="3">flare 1</option><option value="4">flare 2</option><option value="5">flare 3</option><option value="6">twang 1</option><option value="7">twang 2</option><option value="8">twang 3</option><option value="9">swell 1</option><option value="10">swell 2</option><option value="11">swell 3</option><option value="12">tremolo1</option><option value="13">tremolo2</option><option value="14">tremolo3</option><option value="15">tremolo4</option><option value="16">tremolo5</option><option value="17">tremolo6</option><option value="18">decay 1</option><option value="19">decay 2</option><option value="20">decay 3</option></select></div><div class="spectrum" style="height: 100%;"><svg style="background-color: var(--editor-background); touch-action: none; cursor: crosshair;" width="100%" height="100%" viewBox="0 0 120 26" preserveAspectRatio="none"><path fill="var(--ui-widget-background)" pointer-events="none" d="M 0 26 M 3.75 26 M 7.5 26 M 11.25 26 M 15 26 M 18.75 26 L 22.5 8.14 L 26.25 11.71 L 30 15.29 L 33.75 15.29 L 37.5 15.29 L 41.25 11.71 L 45 11.71 L 48.75 15.29 L 52.5 18.86 L 56.25 11.71 L 60 15.29 L 63.75 15.29 L 67.5 15.29 L 71.25 18.86 L 75 15.29 L 78.75 11.71 L 82.5 15.29 L 86.25 15.29 L 90 15.29 L 93.75 15.29 L 97.5 15.29 L 101.25 15.29 L 105 18.86 L 108.75 15.29 L 112.5 15.29 L 119 15.29 L 120 15.29 L 120 26 L 0 26 z "></path><svg pointer-events="none"><rect fill="var(--tonic)" x="2.75" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="29" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="55.25" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="81.5" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="107.75" y="0" width="2" height="26"></rect></svg><svg pointer-events="none" style="display: none;"><rect fill="var(--fifth-note)" x="17.75" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="44" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="70.25" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="96.5" y="0" width="2" height="26"></rect></svg><path fill="none" stroke="currentColor" stroke-width="2" pointer-events="none" d="M 0 26 M 3.75 26 M 7.5 26 M 11.25 26 M 15 26 M 18.75 26 L 22.5 8.14 L 26.25 11.71 L 30 15.29 L 33.75 15.29 L 37.5 15.29 L 41.25 11.71 L 45 11.71 L 48.75 15.29 L 52.5 18.86 L 56.25 11.71 L 60 15.29 L 63.75 15.29 L 67.5 15.29 L 71.25 18.86 L 75 15.29 L 78.75 11.71 L 82.5 15.29 L 86.25 15.29 L 90 15.29 L 93.75 15.29 L 97.5 15.29 L 101.25 15.29 L 105 18.86 L 108.75 15.29 L 112.5 15.29 L 119 15.29 "></path><path fill="currentColor" pointer-events="none" d="M 120 15.29 L 116 11.29 L 116 19.29 z"></path></svg></div></div><div class="selectRow"><div class="selectContainer" style="width: 5em; margin-right: .3em;"><select style="width: 100%;" title="Filter Envelope"><option value="0">none</option><option value="1">note size</option><option value="2">punch</option><option value="3">flare 1</option><option value="4">flare 2</option><option value="5">flare 3</option><option value="6">twang 1</option><option value="7">twang 2</option><option value="8">twang 3</option><option value="9">swell 1</option><option value="10">swell 2</option><option value="11">swell 3</option><option value="12">tremolo1</option><option value="13">tremolo2</option><option value="14">tremolo3</option><option value="15">tremolo4</option><option value="16">tremolo5</option><option value="17">tremolo6</option><option value="18">decay 1</option><option value="19">decay 2</option><option value="20">decay 3</option></select></div><div class="spectrum" style="height: 100%;"><svg style="background-color: var(--editor-background); touch-action: none; cursor: crosshair;" width="100%" height="100%" viewBox="0 0 120 26" preserveAspectRatio="none"><path fill="var(--ui-widget-background)" pointer-events="none" d="M 0 26 M 3.75 26 M 7.5 26 M 11.25 26 M 15 26 L 18.75 1 L 22.5 11.71 L 26.25 15.29 L 30 15.29 L 33.75 18.86 L 37.5 11.71 L 41.25 15.29 L 45 18.86 L 48.75 8.14 L 52.5 15.29 L 56.25 15.29 L 60 15.29 L 63.75 15.29 L 67.5 11.71 L 71.25 15.29 L 75 15.29 L 78.75 15.29 L 82.5 15.29 L 86.25 15.29 L 90 15.29 L 93.75 15.29 L 97.5 15.29 L 101.25 18.86 L 105 15.29 L 108.75 15.29 L 112.5 15.29 L 119 15.29 L 120 15.29 L 120 26 L 0 26 z "></path><svg pointer-events="none"><rect fill="var(--tonic)" x="2.75" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="29" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="55.25" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="81.5" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="107.75" y="0" width="2" height="26"></rect></svg><svg pointer-events="none" style="display: none;"><rect fill="var(--fifth-note)" x="17.75" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="44" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="70.25" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="96.5" y="0" width="2" height="26"></rect></svg><path fill="none" stroke="currentColor" stroke-width="2" pointer-events="none" d="M 0 26 M 3.75 26 M 7.5 26 M 11.25 26 M 15 26 L 18.75 1 L 22.5 11.71 L 26.25 15.29 L 30 15.29 L 33.75 18.86 L 37.5 11.71 L 41.25 15.29 L 45 18.86 L 48.75 8.14 L 52.5 15.29 L 56.25 15.29 L 60 15.29 L 63.75 15.29 L 67.5 11.71 L 71.25 15.29 L 75 15.29 L 78.75 15.29 L 82.5 15.29 L 86.25 15.29 L 90 15.29 L 93.75 15.29 L 97.5 15.29 L 101.25 18.86 L 105 15.29 L 108.75 15.29 L 112.5 15.29 L 119 15.29 "></path><path fill="currentColor" pointer-events="none" d="M 120 15.29 L 116 11.29 L 116 19.29 z"></path></svg></div></div><div class="selectRow"><div class="selectContainer" style="width: 5em; margin-right: .3em;"><select style="width: 100%;" title="Filter Envelope"><option value="0">none</option><option value="1">note size</option><option value="2">punch</option><option value="3">flare 1</option><option value="4">flare 2</option><option value="5">flare 3</option><option value="6">twang 1</option><option value="7">twang 2</option><option value="8">twang 3</option><option value="9">swell 1</option><option value="10">swell 2</option><option value="11">swell 3</option><option value="12">tremolo1</option><option value="13">tremolo2</option><option value="14">tremolo3</option><option value="15">tremolo4</option><option value="16">tremolo5</option><option value="17">tremolo6</option><option value="18">decay 1</option><option value="19">decay 2</option><option value="20">decay 3</option></select></div><div class="spectrum" style="height: 100%;"><svg style="background-color: var(--editor-background); touch-action: none; cursor: crosshair;" width="100%" height="100%" viewBox="0 0 120 26" preserveAspectRatio="none"><path fill="var(--ui-widget-background)" pointer-events="none" d="M 0 26 M 3.75 26 M 7.5 26 M 11.25 26 L 15 1 L 18.75 8.14 L 22.5 8.14 L 26.25 11.71 L 30 4.57 L 33.75 11.71 L 37.5 11.71 L 41.25 11.71 L 45 8.14 L 48.75 15.29 L 52.5 15.29 L 56.25 11.71 L 60 15.29 L 63.75 15.29 L 67.5 15.29 L 71.25 15.29 L 75 15.29 L 78.75 15.29 L 82.5 15.29 L 86.25 15.29 L 90 15.29 L 93.75 15.29 L 97.5 15.29 L 101.25 15.29 L 105 15.29 L 108.75 15.29 L 112.5 15.29 L 119 15.29 L 120 15.29 L 120 26 L 0 26 z "></path><svg pointer-events="none"><rect fill="var(--tonic)" x="2.75" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="29" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="55.25" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="81.5" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="107.75" y="0" width="2" height="26"></rect></svg><svg pointer-events="none" style="display: none;"><rect fill="var(--fifth-note)" x="17.75" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="44" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="70.25" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="96.5" y="0" width="2" height="26"></rect></svg><path fill="none" stroke="currentColor" stroke-width="2" pointer-events="none" d="M 0 26 M 3.75 26 M 7.5 26 M 11.25 26 L 15 1 L 18.75 8.14 L 22.5 8.14 L 26.25 11.71 L 30 4.57 L 33.75 11.71 L 37.5 11.71 L 41.25 11.71 L 45 8.14 L 48.75 15.29 L 52.5 15.29 L 56.25 11.71 L 60 15.29 L 63.75 15.29 L 67.5 15.29 L 71.25 15.29 L 75 15.29 L 78.75 15.29 L 82.5 15.29 L 86.25 15.29 L 90 15.29 L 93.75 15.29 L 97.5 15.29 L 101.25 15.29 L 105 15.29 L 108.75 15.29 L 112.5 15.29 L 119 15.29 "></path><path fill="currentColor" pointer-events="none" d="M 120 15.29 L 116 11.29 L 116 19.29 z"></path></svg></div></div><div class="selectRow"><div class="selectContainer" style="width: 5em; margin-right: .3em;"><select style="width: 100%;" title="Filter Envelope"><option value="0">none</option><option value="1">note size</option><option value="2">punch</option><option value="3">flare 1</option><option value="4">flare 2</option><option value="5">flare 3</option><option value="6">twang 1</option><option value="7">twang 2</option><option value="8">twang 3</option><option value="9">swell 1</option><option value="10">swell 2</option><option value="11">swell 3</option><option value="12">tremolo1</option><option value="13">tremolo2</option><option value="14">tremolo3</option><option value="15">tremolo4</option><option value="16">tremolo5</option><option value="17">tremolo6</option><option value="18">decay 1</option><option value="19">decay 2</option><option value="20">decay 3</option></select></div><div class="spectrum" style="height: 100%;"><svg style="background-color: var(--editor-background); touch-action: none; cursor: crosshair;" width="100%" height="100%" viewBox="0 0 120 26" preserveAspectRatio="none"><path fill="var(--ui-widget-background)" pointer-events="none" d="M 0 26 L 3.75 11.71 L 7.5 8.14 L 11.25 8.14 L 15 4.57 L 18.75 4.57 L 22.5 4.57 L 26.25 8.14 L 30 8.14 L 33.75 8.14 L 37.5 8.14 L 41.25 11.71 L 45 11.71 L 48.75 11.71 L 52.5 11.71 L 56.25 15.29 L 60 15.29 L 63.75 15.29 L 67.5 15.29 L 71.25 18.86 L 75 18.86 L 78.75 18.86 L 82.5 18.86 L 86.25 18.86 L 90 18.86 L 93.75 18.86 L 97.5 18.86 L 101.25 18.86 L 105 18.86 L 108.75 18.86 L 112.5 18.86 L 119 18.86 L 120 18.86 L 120 26 L 0 26 z "></path><svg pointer-events="none"><rect fill="var(--tonic)" x="2.75" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="29" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="55.25" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="81.5" y="0" width="2" height="26"></rect><rect fill="var(--tonic)" x="107.75" y="0" width="2" height="26"></rect></svg><svg pointer-events="none" style="display: none;"><rect fill="var(--fifth-note)" x="17.75" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="44" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="70.25" y="0" width="2" height="26"></rect><rect fill="var(--fifth-note)" x="96.5" y="0" width="2" height="26"></rect></svg><path fill="none" stroke="currentColor" stroke-width="2" pointer-events="none" d="M 0 26 L 3.75 11.71 L 7.5 8.14 L 11.25 8.14 L 15 4.57 L 18.75 4.57 L 22.5 4.57 L 26.25 8.14 L 30 8.14 L 33.75 8.14 L 37.5 8.14 L 41.25 11.71 L 45 11.71 L 48.75 11.71 L 52.5 11.71 L 56.25 15.29 L 60 15.29 L 63.75 15.29 L 67.5 15.29 L 71.25 18.86 L 75 18.86 L 78.75 18.86 L 82.5 18.86 L 86.25 18.86 L 90 18.86 L 93.75 18.86 L 97.5 18.86 L 101.25 18.86 L 105 18.86 L 108.75 18.86 L 112.5 18.86 L 119 18.86 "></path><path fill="currentColor" pointer-events="none" d="M 120 18.86 L 116 14.86 L 116 22.86 z"></path></svg></div></div></div><div class="selectRow" style="display: none;"><span class="tip">Dynamism:</span><input style="margin: 0;" type="range" min="0" max="6" value="0" step="1"></div><div class="selectRow" style="display: none;"><span class="tip">Spread:</span><input style="margin: 0;" type="range" min="0" max="12" value="0" step="1"></div><div class="selectRow" style="display: none;"><span class="tip">Saw↔Pulse:</span><input style="margin: 0;" type="range" min="0" max="6" value="0" step="1"></div><div class="selectRow" style="display: none;"><span class="tip">Pulse Width:</span><input style="margin: 0;" type="range" min="0" max="7" value="0" step="1" title="50%"></div><div class="selectRow" style="display: none;"><span class="tip">Sustain:</span><input style="margin: 0;" type="range" min="0" max="14" value="0" step="1"></div><div class="selectRow" style=""><span class="tip">Unison:</span><div class="selectContainer"><select><option value="0">none</option><option value="1">shimmer</option><option value="2">hum</option><option value="3">honky tonk</option><option value="4">dissonant</option><option value="5">fifth</option><option value="6">octave</option><option value="7">bowed</option><option value="8">piano</option></select></div></div><div style="margin: 2px 0; margin-left: 2em; display: flex; align-items: center;"><span style="flex-grow: 1; text-align: center;"><span class="tip">Effects</span></span><div class="effects-menu"><select><option selected="" disabled=""></option><option value="0">　transition type</option><option value="1">　chord type</option><option value="2">　pitch shift</option><option value="3">　detune</option><option value="4">　vibrato</option><option value="5">✓ note filter</option><option value="6">✓ distortion</option><option value="7">　bitcrusher</option><option value="8">　panning</option><option value="9">　chorus</option><option value="10">　echo</option><option value="11">✓ reverb</option></select></div></div><div class="selectRow" style="display: none;"><span class="tip">Transition:</span><div class="selectContainer"><select><option value="0">normal</option><option value="1">interrupt</option><option value="2">continue</option><option value="3">slide</option><option value="4">slide in pattern</option></select></div></div><div class="selectRow" style="display: none;"><span class="tip">Chords:</span><div class="selectContainer"><select><option value="0">simultaneous</option><option value="1">strum</option><option value="2">arpeggio</option><option value="3" hidden="">custom interval</option></select></div></div><div class="selectRow" style="display: none;"><span class="tip">Pitch Shift:</span><div style="display: flex; position: relative;"><input style="margin: 0;" type="range" min="0" max="24" value="0" step="1"><div class="pitchShiftMarkerContainer"><div class="pitchShiftMarker" style="color: var(--tonic);"></div><div class="pitchShiftMarker" style="color: var(--tonic); left: 50%;"></div><div class="pitchShiftMarker" style="color: var(--tonic); left: 100%;"></div><div class="pitchShiftMarker" style="color: var(--fifth-note); left: 29.1667%;"></div><div class="pitchShiftMarker" style="color: var(--fifth-note); left: 79.1667%;"></div></div></div></div><div class="selectRow" style="display: none;"><span class="tip">Detune:</span><input style="margin: 0;" type="range" min="0" max="18" value="0" step="1"></div><div class="selectRow" style=""><span class="tip">Vibrato:</span><div class="selectContainer"><select><option value="0">none</option><option value="1">light</option><option value="2">delayed</option><option value="3">heavy</option><option value="4">shaky</option></select></div></div><div class="selectRow" style="display: none;"><span class="tip">Note Filter:</span><div class="filterEditor" style="height: 100%; position: relative;"><svg style="background-color: var(--editor-background); touch-action: none;" width="100%" height="100%" viewBox="0 0 120 26" preserveAspectRatio="none"><path fill="var(--ui-widget-background)" pointer-events="none" d="M 0 26 L -1.76 13 L 1.76 13 L 5.29 13 L 8.82 13.01 L 12.35 13.01 L 15.88 13.01 L 19.41 13.02 L 22.94 13.03 L 26.47 13.04 L 30 13.06 L 33.53 13.08 L 37.06 13.11 L 40.59 13.16 L 44.12 13.22 L 47.65 13.31 L 51.18 13.43 L 54.71 13.6 L 58.24 13.83 L 61.76 14.14 L 65.29 14.54 L 68.82 15.07 L 72.35 15.74 L 75.88 16.57 L 79.41 17.56 L 82.94 18.73 L 86.47 20.05 L 90 21.53 L 93.53 23.17 L 97.06 24.96 L 100.59 26.93 L 104.12 29.13 L 107.65 31.66 L 111.18 34.75 L 114.71 38.92 L 118.24 46.03 L 121.76 74.01 L 120 26 L 0 26 z "></path><path fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="3, 2" pointer-events="none" d="M 120 16.57142857142857 L 75.88235294117646 16.57142857142857 "></path><circle fill="white" stroke="none" pointer-events="none" r="4" style="display: none;" cx="90" cy="13"></circle><path fill="currentColor" pointer-events="none" d="M 73.88235294117646 16.57142857142857 a 2 2 0 1 0 4 0 a 2 2 0 1 0 -4 0 "></path></svg><div style="position: absolute; bottom: 0; left: 2px; font-size: 8px; line-height: 1; pointer-events: none;"></div></div></div><div class="selectRow" style="display: none;"><span class="tip">Distortion:</span><input style="margin: 0;" type="range" min="0" max="7" value="0" step="1"></div><div class="selectRow" style="display: none;"><span class="tip">Bit Crush:</span><input style="margin: 0;" type="range" min="0" max="7" value="0" step="1"></div><div class="selectRow" style="display: none;"><span class="tip">Freq Crush:</span><input style="margin: 0;" type="range" min="0" max="13" value="0" step="1"></div><div class="selectRow" style="display: none;"><span class="tip">Panning:</span><input style="margin: 0;" type="range" min="0" max="8" value="4" step="1"></div><div class="selectRow" style=""><span class="tip">Chorus:</span><input style="margin: 0;" type="range" min="0" max="3" value="0" step="1"></div><div class="selectRow" style="display: none;"><span class="tip">Echo:</span><input style="margin: 0;" type="range" min="0" max="7" value="0" step="1"></div><div class="selectRow" style="display: none;"><span class="tip">Echo Delay:</span><input style="margin: 0;" type="range" min="0" max="23" value="0" step="1"></div><div class="selectRow" style=""><span class="tip">Reverb:</span><input style="margin: 0;" type="range" min="0" max="3" value="0" step="1"></div><div style="margin: 2px 0; margin-left: 2em; display: flex; align-items: center;"><span style="flex-grow: 1; text-align: center;"><span class="tip">Envelopes</span></span><button type="button" class="add-envelope"></button></div><div class="envelopeEditor"><div class="envelope-row" style="display: none;"><div class="selectContainer" style="width: 0; flex: 1;"><select><option value="0">none</option><option value="1">note volume</option><option value="2" hidden="">pulse width</option><option value="3" hidden="">sustain</option><option value="4">unison</option><option value="5" hidden="">fm1 freq</option><option value="6" hidden="">fm1 volume</option><option value="22" hidden="">fm2 freq</option><option value="23" hidden="">fm2 volume</option><option value="39" hidden="">fm3 freq</option><option value="40" hidden="">fm3 volume</option><option value="56" hidden="">fm4 freq</option><option value="57" hidden="">fm4 volume</option><option value="7" hidden="">fm feedback</option><option value="8" hidden="">pitch shift</option><option value="9" hidden="">detune</option><option value="10">vibrato range</option><option value="11" hidden="">n. filter freqs</option><option value="12" hidden="">n. filter 1 freq</option><option value="29" hidden="">n. filter 2 freq</option><option value="46" hidden="">n. filter 3 freq</option><option value="63" hidden="">n. filter 4 freq</option><option value="80" hidden="">n. filter 5 freq</option><option value="97" hidden="">n. filter 6 freq</option><option value="114" hidden="">n. filter 7 freq</option><option value="131" hidden="">n. filter 8 freq</option><option value="13" hidden="">n. filter 1 vol</option><option value="30" hidden="">n. filter 2 vol</option><option value="47" hidden="">n. filter 3 vol</option><option value="64" hidden="">n. filter 4 vol</option><option value="81" hidden="">n. filter 5 vol</option><option value="98" hidden="">n. filter 6 vol</option><option value="115" hidden="">n. filter 7 vol</option><option value="132" hidden="">n. filter 8 vol</option><option value="14" hidden="">dynamism</option><option value="15" hidden="">spread</option><option value="16" hidden="">saw↔pulse</option></select></div><div class="selectContainer" style="width: 0; flex: 0.7;"><select><option value="0">none</option><option value="1">note size</option><option value="2">punch</option><option value="3">flare 1</option><option value="4">flare 2</option><option value="5">flare 3</option><option value="6">twang 1</option><option value="7">twang 2</option><option value="8">twang 3</option><option value="9">swell 1</option><option value="10">swell 2</option><option value="11">swell 3</option><option value="12">tremolo1</option><option value="13">tremolo2</option><option value="14">tremolo3</option><option value="15">tremolo4</option><option value="16">tremolo5</option><option value="17">tremolo6</option><option value="18">decay 1</option><option value="19">decay 2</option><option value="20">decay 3</option></select></div><button type="button" class="delete-envelope"></button></div></div></div></div></div></div><div class="promptContainer" style="display: none;"></div></div></div>
+	<div id="text-content">
+		<section>
+			<h1>
+				BeepBox
+			</h1>
+			<p id="introduction">
+				BeepBox is an online tool for sketching and sharing instrumental music. 
+			</p>
+			<p>
+				All song data is contained in the URL at the top of your browser. 
+				When you make changes to the song, the URL is updated to reflect your changes. 
+				When you are satisfied with your song, just copy and paste the URL to save and share your song! 
+			</p>
+			<div class="donation">
+				BeepBox is a passion project, and will always be free to use. If you find it valuable and have the means, any gratuity via
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+					<input type="hidden" name="cmd" value="_donations">
+					<input type="hidden" name="business" value="QZJTX9GRYEV9N">
+					<input type="hidden" name="currency_code" value="USD">
+					<input type="submit" name="submit" value="Paypal">
+				</form>
+				would be appreciated!
+			</div>
+		</section>
+	
+		<div class="column-container">
+			<main class="instructions-column">
+				<section>
+					<h2>
+						Instructions
+					</h2>
+					<p>
+						You can add or remove notes by clicking on the gray rows at the top. 
+						BeepBox automatically plays the notes out loud for you. Try it!
+					</p>
+					<p>
+						Notes go into patterns, and you can edit one pattern at a time.
+						Those numbered boxes at the bottom of the editor are the different patterns you can edit.
+						<span id="bar-editing">
+							Click the boxes to move to a different part of the song, or click the arrows on the currently selected box to swap which pattern is played during that part of the song.
+						</span>
+					</p>
+					<p>
+						BeepBox can play several rows of patterns simultaneously, and each row has its own set of patterns. 
+						Most rows can play melodies or harmonies, but the bottom row is for drums.
+					</p>
+					<p>
+						The purple loop underneath the numbered boxes controls which part of the song is currently repeating. 
+						Move the loop to listen to a different part of the song, or drag the ends to expand the loop to include the whole song. 
+					</p>
+					<div id="keyboard-instructions">
+						<p>
+							When BeepBox has focus (click on its interface above), you can use these keyboard shortcuts: <br>
+						</p>
+						<ul>
+							<li><b>Spacebar</b>: play or pause the song</li>
+							<li><b>Shift Spacebar</b>: play from mouse location</li>
+							<li><b>Z</b>: undo, <b>Y or Shift Z</b>: redo</li>
+							<li><b>C/V</b>: copy/paste selected pattern(s)</li>
+							<li><b>0-9</b>: assign pattern number to selection</li>
+							<li><b>Arrows</b>: move selection</li>
+							<li><b>Ctrl + Arrows</b>: rearrange channels</li>
+							<li><b>[ ]</b>: move playhead backward or forward</li>
+							<li><b>F/H</b>: move to First or Highlighted pattern </li>
+							<li><b>Shift &amp; Drag</b>: select part of a pattern</li>
+							<li>Check BeepBox's edit menu for more!</li>
+						</ul>
+					</div>
+					<p>
+						In the note pattern editor, you can click and drag horizontally on a note to adjust its duration.
+						You can also click above or below an existing note to add more notes to be played simultaneously, which is called a chord. 
+					</p>
+					<div id="mobile-instructions" style="display: none;">
+						<p>
+							You can also long-press in the pattern editor to select a time range within a pattern, which you can then drag to move multiple notes at once.<br>
+						</p>
+					</div>
+					<p>
+						ADVANCED: Drag vertically from an existing note to bend its pitch, or drag vertically from above or below the note to adjust its volume. Drag on the numbered pattern boxes to select multiple patterns to copy and paste parts of your song.
+					</p>
+					<p>
+						BeepBox has many more features. 
+						Try playing with the buttons and menus on the right side to find out what it can do!
+						You can also click on the label next to each option for a description of what it does.
+					</p>
+					<p>
+						Want to see what people have made with BeepBox? Songs that were shared on Twitter prior to 2023-05-22 can now be browsed in <a href="https://twitter-archive.beepbox.co/" target="_blank">this interactive archive</a>!
+					</p>
+				</section>
+				<section>
+					<h2>
+						About
+					</h2>
+					<p>
+						BeepBox is developed by <a href="http://www.johnnesky.com/" target="_blank">John Nesky</a>.
+					</p>
+					<p>
+						BeepBox does not claim ownership over songs created with it, so original songs belong to their authors. 
+					</p>
+					<p>
+						Neither John Nesky nor BeepBox assume responsibility for any copyrighted material played on BeepBox. No songs are ever received, recorded, or distributed by BeepBox's servers. All song data is contained in the URL after the hash (#) mark, and your song data will not leave your device unless you copy and share the URL. BeepBox does not collect, track, or share any user data. 
+					</p>
+					<p>
+						You can find the <a href="https://github.com/johnnesky/beepbox/releases/" target="_blank">release notes for the latest versions of BeepBox here</a>. Those who yearn for simpler times can still use the <a id="linkTo2_3" href="https://www.beepbox.co/2_3/" target="_blank">2.3</a> or <a id="linkTo3_0" href="https://www.beepbox.co/3_0/" target="_blank">3.0.13</a> versions of BeepBox.
+					</p>
+					<p id="offline-instructions">
+						You can download <a download="beepbox_offline.html" href="https://www.beepbox.co/beepbox_offline.html">an offline version of BeepBox</a> to use when you don't have access to the internet. The features are otherwise the same.
+					</p>
+					<p>
+						You can download and use <a href="https://github.com/johnnesky/beepbox" target="_blank">the source code</a> under the MIT license. In particular, you can use the synth code <a href="https://www.beepbox.co/synth_example.html" target="_blank">as demonstrated here</a> to play BeepBox songs in your own JavaScript projects!
+					</p>
+				<section>
+			</section></section></main>
+		</div>
+	</div>
+	
+	<!--
+	Instead of loading js beepbox editor interface directly, test for browser support.
+	<script type="text/javascript" src="beepbox_editor.min.js"></script>
+	-->
+	<script type="text/javascript">
+		
+		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini|android|ipad|playbook|silk/i.test(navigator.userAgent) ) {
+			document.getElementById("introduction").innerHTML = "BeepBox is an online tool for sketching and sharing instrumental music. Make sure that your volume is turned up, then press the play button!";
+			document.getElementById("keyboard-instructions").style.display = "none";
+			document.getElementById("mobile-instructions").style.display = "";
+			document.getElementById("bar-editing").innerHTML = "Tap the boxes to move to a different part of the song, or tap on the currently selected box to swap which pattern is played during that part of the song.";
+			document.getElementById("offline-instructions").innerHTML = 'You can use BeepBox when your device is offline if you put a shortcut to BeepBox on your home screen. <ul><li>Chrome: find the "Add to Home Screen" option in the ⋮ menu.</li><li>Firefox: find the "Add Page Shortcut" option in the ⋮ menu.</li><li>Safari: find the "Add to Home Screen" option in the bookmark menu.</li></ul>';
+		}
+		
+		function browserHasRequiredFeatures() {
+			"use strict";
+			if (window.AudioContext == undefined && window.webkitAudioContext == undefined) {
+				return false;
+			}
+			
+			try {
+				eval("class T {}");
+				eval("const a = () => 0");
+				eval("for (const a of []);");
+			} catch (error) {
+				return false;
+			}
+			
+			return true;
+		}
+		
+		if (browserHasRequiredFeatures()) {
+			// Go ahead and load js beepbox editor interface:
+			var fileref = document.createElement("script");
+			fileref.setAttribute("type", "text/javascript");
+			fileref.setAttribute("src", "beepbox_editor.min.js");
+			document.head.appendChild(fileref);
+		} else {
+			document.getElementById("beepboxEditorContainer").innerHTML = "Sorry, BeepBox doesn't support your browser. Try a recent version of Chrome, Firefox, Edge, Safari, or Opera.";
+		}
+		
+		// If the page was loaded with an old song version that old versions of BeepBox support,
+		// update the links to the old versions so that they'll open the song.
+		if (/^#[1-6]/.test(location.hash)) {
+			document.getElementById("linkTo2_3").href += location.hash;
+		}
+		if (/^#[1-8]/.test(location.hash)) {
+			document.getElementById("linkTo3_0").href += location.hash;
+		}
+		
+	</script>
+
+
+<div id="eagle-drag-images" style="position: fixed; top: -100000px;"></div></body></html>

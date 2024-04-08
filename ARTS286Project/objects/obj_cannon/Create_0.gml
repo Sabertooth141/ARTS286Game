@@ -1,0 +1,2 @@
+path = path_add();
+

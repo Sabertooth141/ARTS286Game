@@ -15,34 +15,50 @@ if (vsp < 10) {
 	vsp += grav;
 }
 
-if (place_meeting(x, y + 10, [obj_wall, tilemap])) {
-	vsp = _key_jump * -jumpspeed;
+if (place_meeting(x, y + 10, [tilemap])) {
+	jumps = jumps_max;
+}
+
+if (_key_jump && jumps > 0) {
+	y -= 5;
+	jumps -= 1;
+	vsp = -jumpspeed;
 }
 
 // horizontal collision
-if (place_meeting(x + hsp, y, [obj_wall, tilemap])) {
-	while (!place_meeting(x + sign(hsp), y, [obj_wall, tilemap])) {
+if (place_meeting(x + hsp, y, [tilemap])) {
+	while (!place_meeting(x + sign(hsp), y, [tilemap])) {
 		x += sign(hsp);
 	}
 	hsp = 0;
 }
 
+if (place_meeting(x, y, [tilemap])) {
+	y -= 5;
+}
+
 // vertical collision
-if (place_meeting(x, y + vsp, [obj_wall, tilemap])) {
-	while (!place_meeting(x, y + sign(vsp), [obj_wall, tilemap])) {
-		y += sign(vsp);
-	}
+if (place_meeting(x, y + 10, [tilemap])) {
+	is_onground = true;
+} else {
+	is_onground = false;
+}
+
+if (is_onground) {
 	vsp = 0;
 }
 
-x += hsp;
-y += vsp;
+if (place_meeting(x, y - 10, [tilemap])) {
+	y += 5;
+	vsp = 0;
+}
 
 if (_key_dash && !is_dashing && dash_cd_timer <= 0) {
 	is_dashing = true;
 	dash_timer = dash_duration;
 	dash_cd_timer = dash_cd;
 }
+
 
 //var _platform = instance_place(x, y + max(1, move_y), obj_platform);
 //if (_platform != noone) {
@@ -56,46 +72,89 @@ if (_key_dash && !is_dashing && dash_cd_timer <= 0) {
 //	move_y = 0;
 //}
 
-if (hsp == 0 || is_nearwall) {
+if (vsp < 0) {
+	is_jumping = true;
+} else {
+	is_jumping = false;
+}
+
+if (vsp > 0) {
+	is_falling = true;
+} else {
+	is_falling = false;
+}
+
+if (hsp == 0) {
+	is_idle = true;
+	is_moving = false;
+} else {
+	is_idle = false;
+	is_moving = true;
+}
+
+if (is_idle && is_onground){
 	sprite_index = spr_player_idle;
-	is_walking_pt2 = false;
 	image_speed = 1;
-	
-} else if (hsp != 0) {
-	if (!is_walking_pt2) {
+	audio_stop_sound(snd_hover);
+} 
+
+if (is_moving && is_onground) {
+	if (sprite_index != spr_player_walk_pt_1 && !is_walking_pt2) {
 		sprite_index = spr_player_walk_pt_1;
 		image_speed = 1;
 	}
-	image_xscale = hsp > 0 ? scale_x : -scale_x;
+	audio_play_sound(snd_hover, 2, true);
+} else {
+	is_walking_pt2 = false;
 }
 
-//if (is_dashing) {
-//	dash_timer--;
-//	image_alpha = .4;
-//	if (dash_timer <= 0) {
-//		is_dashing = false;
-//		image_alpha = 1;
-//	}
+if (is_jumping) {
+	sprite_index = spr_player_idle;
+}
+
+if (is_falling) {
+	sprite_index = spr_player_idle;
+}
+
+if (is_dashing) {
+	is_damagable = false;
+	dash_timer--;
+	image_alpha = .4;
+	if (dash_timer <= 0) {
+		is_dashing = false;
+		image_alpha = 1;
+	}
+} else {
+	is_damagable = true;
+}
+
+if (dash_cd_timer > 0) {
+	dash_cd_timer--;
+}
+
+if (is_dashing && !place_meeting(x + (dash_speed * (image_xscale / image_xscale) * sign(image_xscale)), y, tilemap)) {
+	var _dash_direction = (image_xscale / image_xscale) * sign(image_xscale);
+	hsp = dash_speed * _dash_direction;
+}
+
+//if (hp < temp_hp) {
+//	var _old_fog = gpu_get_fog();
+//	gpu_set_fog(true, c_white, 0, 0);
+//	draw_sprite(spr_player_idle, 0, x, y);
+//	gpu_set_fog(_old_fog[0], _old_fog[1], _old_fog[2], _old_fog[3])
 //}
 
-//if (dash_cd_timer > 0) {
-//	dash_cd_timer--;
-//}
+if (hp <= 0) {
+	global.dead = true;
+	room_goto(rm_end);
+}
 
-//if (is_dashing) {
-//	var _dash_direction = image_xscale;
-//	hspeed = dash_speed * _dash_direction;
-//} else {
-	
-//	if (keyboard_check(left)) {
-//		hspeed = -5;
-//	} else if (keyboard_check(right)) {
-//		hspeed = 5;
-//	} else {
-//		hspeed = 0;	
-//	}
-	
-//	if (keyboard_check_pressed(jump) && is_on_ground) {
-//	vspeed = -35;
-//	}
-//}
+if (hsp > 0) {
+	image_xscale = scale_x;
+}
+if (hsp < 0) {
+	image_xscale = -scale_x;
+}
+
+x += hsp;
+y += vsp;

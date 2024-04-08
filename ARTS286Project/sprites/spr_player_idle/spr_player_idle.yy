@@ -1,7 +1,7 @@
 {
   "$GMSprite":"",
   "%Name":"spr_player_idle",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":472,
   "bbox_left":155,
   "bbox_right":290,

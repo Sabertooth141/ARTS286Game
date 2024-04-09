@@ -1,0 +1,2 @@
+draw_sprite_stretched(spr_hp_bg, 0, healthbar_x, healthbar_y, healthbar_width, healthbar_height);
+draw_sprite_stretched(spr_hp_bar, 0, healthbar_x, healthbar_y, (hp / hp_max) * healthbar_width, healthbar_height);

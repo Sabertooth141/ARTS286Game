@@ -1,6 +1,9 @@
 hsp = dir * movespeed;
 vsp += grav;
 
+healthbar_y = y - sprite_height;
+healthbar_x = x - sprite_width / 2;
+
 // horizontal collision
 if (place_meeting(x + hsp, y, [tilemap])) {
 	while (!place_meeting(x + sign(hsp), y, [tilemap])) {
@@ -26,7 +29,7 @@ y += vsp;
 
 // enemy collision
 if (place_meeting(x, y, obj_player) && !created_circle) {
-	var _predict = instance_create_layer(x, y, "Effects", obj_prediction_circle);
+	predict = instance_create_layer(x, y, "Effects", obj_prediction_circle);
 	
 	movespeed = 0;
 	created_circle = true;
@@ -35,3 +38,16 @@ if (place_meeting(x, y, obj_player) && !created_circle) {
 	
 	alarm[0] = 45;
 }
+
+if (obj_player_laser != noone && place_meeting(x, y, obj_player_laser) && global.damagable) {
+	hp -= 50; 
+	global.damagable = false;
+}
+
+if (hp <= 0) {
+	if (predict != noone) {
+		instance_destroy(predict);
+	}
+	instance_destroy();
+}
+

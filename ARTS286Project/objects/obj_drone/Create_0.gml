@@ -34,9 +34,6 @@ for (i = 0; i < room_width; i++) {
 	}
 }
 
-hp = 100;
-hp_max = hp;
-
 timer = noone;
 prediction = noone;
 
@@ -45,3 +42,5 @@ healthbar_height = 4;
 healthbar_x = 0;
 healthbar_y = 0;
 
+hp = 100;
+hp_max = hp;

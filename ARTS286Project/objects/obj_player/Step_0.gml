@@ -4,7 +4,7 @@ var _key_right = keyboard_check(vk_right);
 var _key_down = keyboard_check(vk_down);
 var _key_jump = keyboard_check_pressed(vk_space);
 var _key_dash = keyboard_check(vk_shift);
-var _key_shoot = keyboard_check(ord("F"));
+var _key_shoot = keyboard_check_pressed(ord("F"));
 
 // input reaction
 var _move = _key_left + _key_right;
@@ -20,7 +20,7 @@ if (place_meeting(x, y + 10, [tilemap])) {
 }
 
 if (_key_jump && jumps > 0) {
-	y -= 5;
+	y -= 10;
 	jumps -= 1;
 	vsp = -jumpspeed;
 }
@@ -33,9 +33,9 @@ if (place_meeting(x + hsp, y, [tilemap])) {
 	hsp = 0;
 }
 
-if (place_meeting(x, y, [tilemap])) {
-	y -= 5;
-}
+//if (place_meeting(x, y, [tilemap])) {
+//	y -= 5;
+//}
 
 // vertical collision
 if (place_meeting(x, y + 10, [tilemap])) {
@@ -72,13 +72,13 @@ if (_key_dash && !is_dashing && dash_cd_timer <= 0) {
 //	move_y = 0;
 //}
 
-if (vsp < 0) {
+if (vsp <= -1) {
 	is_jumping = true;
 } else {
 	is_jumping = false;
 }
 
-if (vsp > 0) {
+if (vsp >= 1) {
 	is_falling = true;
 } else {
 	is_falling = false;
@@ -137,16 +137,22 @@ if (is_dashing && !place_meeting(x + (dash_speed * (image_xscale / image_xscale)
 	hsp = dash_speed * _dash_direction;
 }
 
-//if (hp < temp_hp) {
-//	var _old_fog = gpu_get_fog();
-//	gpu_set_fog(true, c_white, 0, 0);
-//	draw_sprite(spr_player_idle, 0, x, y);
-//	gpu_set_fog(_old_fog[0], _old_fog[1], _old_fog[2], _old_fog[3])
-//}
-
 if (hp <= 0) {
 	global.dead = true;
+	instance_destroy();
 	room_goto(rm_end);
+}
+
+if (_key_shoot && !global.shoot && shoot_cd_timer <= 0) {
+	global.shoot = true;
+	shoot_cd_timer = shoot_cd;
+} 
+if (global.shoot && shoot_cd_timer <= 0) {
+	global.shoot = false;
+}
+
+if (shoot_cd_timer > 0) {
+	shoot_cd_timer--;
 }
 
 if (hsp > 0) {

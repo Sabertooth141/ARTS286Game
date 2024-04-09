@@ -1,5 +1,7 @@
 var _target_x = x;
-vspd = lengthdir_x(move_speed, direction);
+hsp = lengthdir_x(move_speed, direction);
+
+healthbar_y = y - sprite_height;
 
 if (x < obj_player.x - desired_distance) {
 	_target_x = obj_player.x - desired_distance;
@@ -7,29 +9,42 @@ if (x < obj_player.x - desired_distance) {
 	_target_x = obj_player.x + desired_distance;
 }
 
-if (vspd > 0 && !is_tracking) {
+if (hsp > 0 && !is_tracking) {
 	image_xscale = -x_scale;
 }
 
-if (vspd < 0 && !is_tracking) {
+if (hsp < 0 && !is_tracking) {
 	image_xscale = x_scale;
+}
+
+if (sign(image_xscale) > 0) {
+	healthbar_x = x - sprite_width / 3;
+}
+if (sign(image_xscale) < 0) {
+	healthbar_x = x + sprite_width / 3;
 }
 
 //show_debug_message(string((abs(x - obj_player.x))) + " " + string(abs(y - obj_player.y)) + " " + string(is_tracking));
 
-if (abs(x - obj_player.x) <= desired_distance && abs(y - obj_player.y) <= 10) {
-	alarm[0] = 60;
+if (abs(x - obj_player.x) <= desired_distance && abs(y - obj_player.y) <= 10 && is_tracking) {
+	alarm[0] = 90;
 	if (!created_laser) {
-		var _prediction = instance_create_layer(x - sprite_width / 2, y + sprite_height / 3, "Effects", obj_laser_prediction);
-		if (image_xscale > 0) {
-			_prediction.image_xscale *= -1;
-		}
 		created_laser = true;
+		alarm[1] = 45;
+		prediction = instance_create_layer(x - sprite_width / 2, y + sprite_height / 3.5, "Effects", obj_laser_prediction);
+		if (image_xscale > 0) {
+			prediction.image_xscale *= -1;
+		}
+		timer = layer_sequence_create("Effects", x - sprite_width / 2, y + sprite_height / 3.5, seq_laser_prediction);
+		if (image_xscale > 0) {
+			layer_sequence_xscale(timer, -1);
+		}
 	}
 }
 
 if ((abs(x - obj_player.x) <= desired_distance + 50 && abs(y - obj_player.y) <= 100) && !created_laser) {
 	is_tracking = true;
+	is_returning = false;
 }
 
 if (!is_tracking && is_patrolling) {
@@ -73,10 +88,27 @@ if (is_tracking && !created_laser) {
 
 	if (_found_path) {
 		path_start(path, move_speed, path_action_stop, true);
-	
-		image_xscale = sign(x - obj_player.x) == 0 ? image_xscale : sign(x - obj_player.x) * x_scale;
-	
 	} 
+
+	if (x - obj_player.x > 0) {
+		image_xscale = x_scale;
+	}
+	if (x - obj_player.x <= 0){
+		image_xscale = -x_scale;
+	}
 }
 
-show_debug_message(is_returning);
+if (obj_player_laser != noone && place_meeting(x, y, obj_player_laser) && global.damagable) {
+	hp -= 50;
+	global.damagable = false;
+}
+
+if (hp <= 0) {
+	if (prediction != noone) {
+		instance_destroy(prediction);
+	}
+	if (timer != noone) {
+		layer_sequence_destroy(timer);
+	}
+	instance_destroy();
+}

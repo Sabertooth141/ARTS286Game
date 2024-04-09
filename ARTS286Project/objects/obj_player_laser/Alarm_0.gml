@@ -1,0 +1,1 @@
+global.damagable = true;

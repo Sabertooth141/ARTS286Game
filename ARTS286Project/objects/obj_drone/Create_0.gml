@@ -5,7 +5,7 @@ width = room_width / cell_size;
 height = room_height / cell_size;
 
 move_speed = 4;
-vspd = 0;
+hsp = 0;
 
 x_scale = image_xscale;
 
@@ -33,3 +33,15 @@ for (i = 0; i < room_width; i++) {
 		}
 	}
 }
+
+hp = 100;
+hp_max = hp;
+
+timer = noone;
+prediction = noone;
+
+healthbar_width = 40;
+healthbar_height = 4;
+healthbar_x = 0;
+healthbar_y = 0;
+

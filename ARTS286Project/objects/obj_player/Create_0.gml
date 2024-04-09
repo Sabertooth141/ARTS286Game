@@ -30,7 +30,11 @@ scale_y = image_yscale;
 is_damagable = true;
 hp = 100;
 hp_max = hp;
-temp_hp = hp;
+
+global.shoot = false;
+is_shooting = false;
+shoot_cd_timer = 0;
+shoot_cd = 60;
 
 healthbar_width = 800;
 healthbar_height = 20;
@@ -45,4 +49,7 @@ global.time_up = false;
 global.game_over = false;
 global.dead = false;
 
-audio_play_sound(snd_bgm, 100, true);
+persistent = true;
+
+is_positioned = false;
+

@@ -2,13 +2,15 @@
 //	room_goto(rm_end);
 //	global.time_up = true;
 //}
-if (_sec == 60) {
-	_min += 1;
-	_sec = 0;
-} else {
-	_sec += 1 / 60;
-}
+if (!global.starting) {
+	if (_sec == 60) {
+		_min += 1;
+		_sec = 0;
+	} else {
+		_sec += 1 / 60;
+	}
 
-if (global.dead || global.game_over || global.time_up) {
-	instance_destroy();
+	if (global.dead || global.game_over || global.time_up) {
+		instance_destroy();
+	}
 }

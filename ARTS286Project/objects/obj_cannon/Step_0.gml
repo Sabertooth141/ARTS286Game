@@ -2,6 +2,7 @@ hsp = obj_player.hsp;
 
 if (point_distance(x, y, obj_player.x, obj_player.y) <= 100) {
 	is_tracking = true;
+	can_shoot = true;
 }
 
 if (hsp > 0) {
@@ -12,7 +13,7 @@ if (hsp < 0) {
 }
 
 if (is_tracking) {
-	if (global.shoot != noone && global.shoot) {
+	if (global.shoot != noone && global.shoot && can_shoot) {
 		path_end();
 		if (!shot) {
 			var _laser = instance_create_layer(x + sprite_width / 2, y - 2, "Effects", obj_player_laser);

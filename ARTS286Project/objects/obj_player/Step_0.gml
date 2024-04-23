@@ -103,7 +103,10 @@ if (is_moving && is_onground) {
 		sprite_index = spr_player_walk_pt_1;
 		image_speed = 1;
 	}
-	audio_play_sound(snd_hover, 2, true);
+	
+	if (!audio_is_playing(snd_hover)) {
+		audio_play_sound(snd_hover, 2, true);
+	}
 } else {
 	is_walking_pt2 = false;
 }

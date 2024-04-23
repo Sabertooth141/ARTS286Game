@@ -8,3 +8,7 @@ if (_sec == 60) {
 } else {
 	_sec += 1 / 60;
 }
+
+if (global.dead || global.game_over || global.time_up) {
+	instance_destroy();
+}

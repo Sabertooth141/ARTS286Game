@@ -20,6 +20,7 @@
     {"name":"inst_1AAB1CB1","path":"rooms/rm_scene_1/rm_scene_1.yy",},
     {"name":"inst_43D3D742","path":"rooms/rm_scene_1/rm_scene_1.yy",},
     {"name":"inst_3870AF96","path":"rooms/rm_scene_1/rm_scene_1.yy",},
+    {"name":"inst_6CE2B369","path":"rooms/rm_scene_1/rm_scene_1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -44,6 +45,7 @@
         {"$GMRInstance":"","%Name":"inst_54DE7FC6","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_54DE7FC6","objectId":{"name":"obj_mine","path":"objects/obj_mine/obj_mine.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.5,"scaleY":0.5,"x":768.0,"y":224.0,},
         {"$GMRInstance":"","%Name":"inst_6FAC460F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6FAC460F","objectId":{"name":"obj_exit","path":"objects/obj_exit/obj_exit.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":6.0,"scaleY":1.0,"x":1056.0,"y":512.0,},
         {"$GMRInstance":"","%Name":"inst_1AAB1CB1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1AAB1CB1","objectId":{"name":"obj_mine","path":"objects/obj_mine/obj_mine.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.5,"scaleY":0.5,"x":1024.0,"y":288.0,},
+        {"$GMRInstance":"","%Name":"inst_6CE2B369","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6CE2B369","objectId":{"name":"obj_pause","path":"objects/obj_pause/obj_pause.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":64.0,"y":512.0,},
       ],"layers":[],"name":"Instances","properties":[
         {"name":"g_TintCol","type":1,"value":"#FFAD3AFF",},
       ],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},

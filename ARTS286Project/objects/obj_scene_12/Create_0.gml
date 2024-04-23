@@ -1,0 +1,4 @@
+personal_log = "-- START OF ENTRY --\n2069.12.19\nPersonal Log Oliver Bennett, Research Outpost Epsilon:\nWe started running a number of tests on the subject,\nthere seemes to be a port for weapon systems, might have something to do with that giant cannon we found.\nHell most of our weapon technology is based on that thing, where did she even come from?\nShe looks human, whoever created her did a really good job.\nStill a lot of mystery to solve though, hopefully we will be able to find some sort of serial number and be able to identify this thing.\n -- END OF ENTRY --";
+if (obj_player != noone) {
+		instance_deactivate_object(obj_player);	
+}

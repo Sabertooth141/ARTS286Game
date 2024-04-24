@@ -22,6 +22,7 @@
     {"name":"inst_3870AF96_2","path":"rooms/rm_between_12/rm_between_12.yy",},
     {"name":"inst_6CE2B369_2","path":"rooms/rm_between_12/rm_between_12.yy",},
     {"name":"inst_470614F","path":"rooms/rm_between_12/rm_between_12.yy",},
+    {"name":"inst_5394D8CB","path":"rooms/rm_between_12/rm_between_12.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -33,6 +34,7 @@
         {"$GMRInstance":"","%Name":"inst_5029698D_2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5029698D_2","objectId":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":192.0,"y":480.0,},
         {"$GMRInstance":"","%Name":"inst_43D3D742_2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_43D3D742_2","objectId":{"name":"obj_music_controller","path":"objects/obj_music_controller/obj_music_controller.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":64.0,"y":64.0,},
         {"$GMRInstance":"","%Name":"inst_3870AF96_2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3870AF96_2","objectId":{"name":"obj_room_entry","path":"objects/obj_room_entry/obj_room_entry.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":120.0,"y":148.0,},
+        {"$GMRInstance":"","%Name":"inst_5394D8CB","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5394D8CB","objectId":{"name":"obj_cannon","path":"objects/obj_cannon/obj_cannon.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":0.1512657,"scaleY":0.1512657,"x":224.0,"y":288.0,},
       ],"layers":[],"name":"Player","properties":[
         {"name":"g_TintCol","type":1,"value":"#FFFFE9CC",},
       ],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},

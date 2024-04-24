@@ -38,9 +38,16 @@ if (room == rm_between_23) {
 	strings[10] = "Sector B10";
 	strings[11] = "Project Eclipse Primary Confinment Lab";
 }
+if (room == rm_scene_end) {
+	strings[0] = "Warning";
+	strings[1] = "Unauthorized access detected";
+	strings[2] = "Deploying countermeasures";
+}
 
 width = sprite_width;
 
 
 draw_start_w = x - sprite_width / 2;
 draw_start_h = y - sprite_height / 2;
+
+triggered = false;

@@ -39,4 +39,8 @@ if (keyboard_check_pressed(ord("P"))) {
 	}
 }
 
+if (keyboard_check_pressed((ord("Q")))) {
+	game_end();
+}
+
 gpu_set_blendenable(true);

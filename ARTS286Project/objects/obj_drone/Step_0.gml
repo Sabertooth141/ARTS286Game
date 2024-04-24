@@ -63,7 +63,7 @@ if (is_returning) {
 		path_start(path, move_speed, path_action_stop, true);
 	}
 	if (path_position == 1) {
-		path_start(patrol_start, move_speed, path_action_continue, true);
+		path_start(patrol_start, move_speed, path_action_reverse, true);
 		is_patrolling = true;
 		is_returning = false;
 	}

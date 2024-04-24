@@ -7,3 +7,4 @@ if (obj_player != noone && !place_meeting(x, y, obj_player) && entered) {
 	entered = false;
 	instance_destroy(obj_text_box);
 }
+

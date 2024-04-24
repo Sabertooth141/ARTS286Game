@@ -6,6 +6,13 @@ var _key_jump = global.starting ? false : keyboard_check_pressed(vk_space);
 var _key_dash = global.starting ? false : keyboard_check(vk_shift);
 var _key_shoot = global.starting ? false : keyboard_check_pressed(ord("F"));
 
+if (room == rm_scene_end) {
+	_key_jump = false;
+	_key_shoot = false;
+	_key_dash = false;
+}
+
+//!global.commited
 if (!global.commited) {
 	audio_pause_sound(snd_bgm);
 	sprite_index = spr_player_menu;
@@ -55,7 +62,7 @@ if (!global.commited) {
 		vsp = 0;
 	}
 
-	if (_key_dash && !is_dashing && dash_cd_timer <= 0) {
+	if (_key_dash && !is_dashing && dash_cd_timer <= 0 && room != rm_scene_end) {
 		is_dashing = true;
 		dash_timer = dash_duration;
 		dash_cd_timer = dash_cd;
@@ -144,6 +151,7 @@ if (!global.commited) {
 
 	if (hp <= 0) {
 		global.dead = true;
+		instance_destroy(obj_camera);
 		instance_destroy();
 		room_goto(rm_end);
 	}
@@ -170,6 +178,7 @@ if (!global.commited) {
 	x += hsp;
 	y += vsp;
 }
+
 
 
 

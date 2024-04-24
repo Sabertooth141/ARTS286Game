@@ -10,3 +10,6 @@ y_scale = image_yscale;
 is_tracking = false;
 can_shoot = false;
 
+persistent = true;
+
+is_positioned = false;

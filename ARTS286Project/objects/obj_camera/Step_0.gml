@@ -27,7 +27,10 @@ if (!global.starting && !is_normal) {
 	
 	camera_set_view_target(view_camera[0], follow);
 	
-	camera_set_view_pos(view_camera[0], obj_player.x / 2, obj_player.y / 2);
+	if (obj_player != noone) {
+		camera_set_view_pos(view_camera[0], obj_player.x / 2, obj_player.y / 2);
+	}
+	
 }
 if (!global.starting) {
 	if (cam_width > _current_width) {
@@ -47,5 +50,4 @@ if (keyboard_check_pressed(ord("L"))) {
 	global.starting = false;
 }
 
-show_debug_message(follow);
 

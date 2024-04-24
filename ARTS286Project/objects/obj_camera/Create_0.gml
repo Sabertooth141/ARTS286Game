@@ -8,7 +8,12 @@ follow = noone;
 x_to = x;
 y_to = y;
 
-global.starting = true;
+if (room == rm_scene_start) {
+	global.starting = true;
+} else {
+	global.starting = false;
+}
+
 is_normal = false;
 
 step_count = 0;

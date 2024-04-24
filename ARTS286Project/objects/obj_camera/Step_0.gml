@@ -47,3 +47,5 @@ if (keyboard_check_pressed(ord("L"))) {
 	global.starting = false;
 }
 
+show_debug_message(follow);
+

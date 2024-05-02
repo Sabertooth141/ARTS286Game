@@ -3,8 +3,5 @@ if (obj_player != noone && place_meeting(x, y, obj_player) && !entered) {
 	instance_create_layer(x, y, "Effects", obj_text_box);
 }
 
-if (obj_player != noone && !place_meeting(x, y, obj_player) && entered) {
-	entered = false;
-	instance_destroy(obj_text_box);
-}
+
 

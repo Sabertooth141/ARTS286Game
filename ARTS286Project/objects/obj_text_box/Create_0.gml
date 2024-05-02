@@ -14,7 +14,7 @@ if (room == rm_scene_start) {
 }
 if (room == rm_between_12) {
 	strings[0] = "--Personal Log: Researcher Alex Stevenson--";
-	strings[1] = "Research Outpust Epsilon - Project Eclipse";
+	strings[1] = "Research Outpost Epsilon - Project Eclipse";
 	strings[2] = "Time: 2150/1/1 14:12:04";
 	strings[3] = "We ran a couple of more test on that ... entity ... in the confinement lab.";
 	strings[4] = "Still don't know where she came from.";
@@ -26,7 +26,7 @@ if (room == rm_between_12) {
 }
 if (room == rm_between_23) {
 	strings[0] = "--AUTOMATED LOG--";
-	strings[1] = "Research Outpust Epsilon - Project Eclipse";
+	strings[1] = "Research Outpost Epsilon - Project Eclipse";
 	strings[2] = "Time: 2150/3/2 18:11:02";
 	strings[3] = "All personnel evacuated, facility under automated system control";
 	strings[4] = "Time: 2150/3/1 19:56:23";

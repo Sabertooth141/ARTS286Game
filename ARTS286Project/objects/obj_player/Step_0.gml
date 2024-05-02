@@ -152,6 +152,9 @@ if (!global.commited) {
 	if (hp <= 0) {
 		global.dead = true;
 		instance_destroy(obj_camera);
+		if (obj_cannon != noone) {
+			instance_destroy(obj_cannon);
+		}
 		instance_destroy();
 		room_goto(rm_end);
 	}

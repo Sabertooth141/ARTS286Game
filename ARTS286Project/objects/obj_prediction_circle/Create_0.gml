@@ -1,4 +1,4 @@
-image_xscale = (room == rm_scene_end) ? 1 : 0.3;
+image_xscale = (room == rm_scene_end) ? 3 : 0.3;
 image_yscale = image_xscale;
 
 timer = layer_sequence_create("Effects", x, y, seq_precidtion_circle);
